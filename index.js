@@ -1,17 +1,30 @@
-const jsonServer = require("json-server"); // importing json-server library
-const cors = require("cors");
-const server = jsonServer.create();
-const router = jsonServer.router("db.json");
-const middlewares = jsonServer.defaults();
-const port = process.env.PORT || 8080; //  chose port from here like 8080, 3001
+const express = require("express");
+const app = express();
+require("dotenv").config();
+const port = process.env.PORT || 3000;
+const { getFillings, getPressReleases, getStocksData } = require("./functions");
+const cron = require("node-cron");
 
-const corsOptions = {
-    origin: '*',  // Allow all domains - for development only
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+const { connect } = require("./config/Database");
+connect();
+
+const cronFunctions = async () => {
+    try {
+        await getFillings();
+        await getPressReleases();
+        await getStocksData();
+    } catch (error) {
+        console.log("Error in cronFunctions", error);
+    }
 };
+setTimeout(() => {
+    console.log("Cron job started");
+    cron.schedule("0 7 * * *", cronFunctions); // This will run the cron job at 7:00 AM everyday
+}, 7000);
+app.get("/", async (req, res) => {
+    res.send("Hello World!");
+});
 
-server.use(cors(corsOptions));
-server.use(middlewares);
-server.use(router);
-
-server.listen(port);
+app.listen(port, () => {
+    console.log(`Server is listening on port ${port}`);
+});
