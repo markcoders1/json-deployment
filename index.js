@@ -4,15 +4,18 @@ require("dotenv").config();
 const port = process.env.PORT || 3000;
 const { getFillings, getPressReleases, getStocksData } = require("./functions");
 const cron = require("node-cron");
-
+const dataFetching = require("./Controllers/data-fetching-controller.js")
 const { connect } = require("./config/Database");
 connect();
+// app.us json
+app.use(express.json());
 
 const cronFunctions = async () => {
     try {
         await getFillings();
         await getPressReleases();
         await getStocksData();
+        console.log('Data has been updated successfully to the DB');
     } catch (error) {
         console.log("Error in cronFunctions", error);
     }
@@ -24,6 +27,8 @@ setTimeout(() => {
 app.get("/", async (req, res) => {
     res.send("Hello World!");
 });
+
+app.use("/api", dataFetching);
 
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
