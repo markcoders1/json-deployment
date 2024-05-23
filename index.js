@@ -7,7 +7,6 @@ const cron = require("node-cron");
 const dataFetching = require("./Controllers/data-fetching-controller.js")
 const { connect } = require("./config/Database");
 connect();
-// app.us json
 app.use(express.json());
 
 const cronFunctions = async () => {
@@ -22,7 +21,18 @@ const cronFunctions = async () => {
 };
 setTimeout(() => {
     console.log("Cron job started");
-    cron.schedule("0 7 * * *", cronFunctions); // This will run the cron job at 7:00 AM everyday
+
+    cron.schedule("0 8 * * *", cronFunctions, {
+        scheduled: true,
+        timezone: "America/New_York"
+    });
+    
+    // Runs at 5:00 PM EST every day
+    cron.schedule("0 17 * * *", cronFunctions, {
+        scheduled: true,
+        timezone: "America/New_York"
+    });
+
 }, 7000);
 app.get("/", async (req, res) => {
     res.send("Hello World!");
