@@ -3,7 +3,7 @@ const router = express.Router();
 
 
 const Filling = require('../Models/Filling'); // Update the path
-const News = require('../Models/Press');
+const Press = require('../Models/Press');
 const Stock = require('../Models/Stock');
 
 router.get('/sec-fillings', async (req, res) => {
@@ -24,7 +24,7 @@ router.get('/sec-fillings', async (req, res) => {
 
 router.get('/press-release', async (req, res) => {
     try {
-        const news = await News.find();
+        const news = await Press.find();
         if( news.length > 0 ){
             console.log('News Fetched');
             res.json(news);
@@ -55,21 +55,5 @@ router.get('/stock-quote', async (req, res) => {
     }
 });
 
-
-router.get('/stock-quote/:symbol', async (req, res) => {
-    try {
-        const stock = await Stock.findOne({ symbol: req.params.symbol });
-        if( stock ){
-            console.log('Stock Fetched');
-            res.json(stock);
-        }
-        else{
-            console.log('Stock not found');
-            res.status(404).json({ message: 'Stock not found' });
-        }
-    } catch (error) {
-        res.status(500).json({ message: error.message });
-    }
-});
 
 module.exports = router;
