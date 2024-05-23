@@ -22,6 +22,7 @@ const cronFunctions = async () => {
 setTimeout(() => {
     console.log("Cron job started");
 
+    // Runs at 8:00 AM EST every day
     cron.schedule("0 8 * * *", cronFunctions, {
         scheduled: true,
         timezone: "America/New_York"

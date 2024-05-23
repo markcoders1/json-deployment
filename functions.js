@@ -2,13 +2,14 @@ const { default: axios } = require("axios");
 const Filling = require("./Models/Filling");
 const Press = require("./Models/Press");
 const Stock = require("./Models/Stock");
-
+const kscopeApiKey = process.env.KSCOPE_API_KEY;
+const polygonApiKey = process.env.POLYGON_API_KEY;
 const getFillings = async () => {
   try {
     let config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: "https://api.kscope.io/v2/sec/search/0001374328?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&content=sec",
+      url: `https://api.kscope.io/v2/sec/search/0001374328?key=${kscopeApiKey}&content=sec`,
       headers: {},
     };
     const response = await axios(config);
@@ -36,7 +37,7 @@ const getPressReleases = async () => {
     let config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: "https://api.kscope.io/v2/news/press-releases/FTLF?key=8bc43de0-321b-4ca0-b39c-52b60b554e89",
+      url: `https://api.kscope.io/v2/news/press-releases/FTLF?key=${kscopeApiKey}`,
       headers: {},
     };
     const response = await axios(config);
@@ -76,7 +77,7 @@ const getStocksData = async () => {
     const config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: `https://api.polygon.io/v2/aggs/ticker/LFVN/range/1/day/${twoYearsAgoStr}/${currentDateStr}?adjusted=true&sort=asc&apiKey=_l8pALqPbP40rV7IOhsWTt36AVgrwc3X`,
+      url: `https://api.polygon.io/v2/aggs/ticker/LFVN/range/1/day/${twoYearsAgoStr}/${currentDateStr}?adjusted=true&sort=asc&apiKey=${polygonApiKey}`,
       headers: {},
     };
     const response = await axios(config);
