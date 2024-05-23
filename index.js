@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 require("dotenv").config();
 const port = process.env.PORT || 3000;
 const { getFillings, getPressReleases, getStocksData } = require("./functions");
@@ -8,6 +9,7 @@ const dataFetching = require("./Controllers/data-fetching-controller.js")
 const { connect } = require("./config/Database");
 connect();
 app.use(express.json());
+app.use(cors());
 
 const cronFunctions = async () => {
     try {
@@ -22,6 +24,7 @@ const cronFunctions = async () => {
 setTimeout(() => {
     console.log("Cron job started");
 
+    // Runs at 8:00 AM EST every day
     cron.schedule("0 8 * * *", cronFunctions, {
         scheduled: true,
         timezone: "America/New_York"
