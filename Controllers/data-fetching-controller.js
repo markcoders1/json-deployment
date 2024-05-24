@@ -28,7 +28,7 @@ router.get('/press-release', async (req, res) => {
         const news = await Press.find();
         if( news.length > 0 ){
             console.log('News Fetched');
-            news.reverse();
+            // news.reverse();
             res.json(news);
         }
         else{
@@ -46,7 +46,7 @@ router.get('/stock-quote', async (req, res) => {
         const stock = await Stock.find();
         if( stock.length > 0 ){
             console.log('Stocks Fetched');
-            stock.reverse();
+            // stock.reverse();
             res.json(stock);
         }
         else{
