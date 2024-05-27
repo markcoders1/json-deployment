@@ -13,6 +13,7 @@ app.use(cors());
 
 const cronFunctions = async () => {
     try {
+        console.log("Cron job running");
         await getFillings();
         await getPressReleases();
         await getStocksData();
@@ -31,7 +32,7 @@ setTimeout(() => {
     });
     
     // Runs at 5:00 PM EST every day
-    cron.schedule("35 20 * * *", cronFunctions, {
+    cron.schedule("50 23 * * *", cronFunctions, {
         scheduled: true,
         timezone: "America/New_York"
     });
