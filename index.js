@@ -22,22 +22,13 @@ const cronFunctions = async () => {
         console.log("Error in cronFunctions", error);
     }
 };
+
 setTimeout(() => {
     console.log("Cron job started");
-
-    // Runs at 8:00 AM EST every day
-    cron.schedule("0 8 * * *", cronFunctions, {
-        scheduled: true,
-        timezone: "America/New_York"
-    });
-    
-    // Runs at 5:00 PM EST every day
-    cron.schedule("50 23 * * *", cronFunctions, {
-        scheduled: true,
-        timezone: "America/New_York"
-    });
-
+    // Runs at 8:00 AM and 5:00 PM EST everyday
+    cron.schedule("0 8,17 * * *", cronFunctions);
 }, 7000);
+
 app.get("/", async (req, res) => {
     res.send("Hello World!");
 });
