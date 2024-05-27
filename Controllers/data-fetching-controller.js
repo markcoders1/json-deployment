@@ -11,7 +11,7 @@ router.get('/sec-fillings', async (req, res) => {
         const fillings = await Filling.find();
         if( fillings.length > 0 ){
             console.log('Fillings Fetched');
-            fillings.reverse();
+            //fillings.reverse();
             res.json(fillings);
         }
         else{
