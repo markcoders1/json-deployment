@@ -31,7 +31,7 @@ setTimeout(() => {
     });
     
     // Runs at 5:00 PM EST every day
-    cron.schedule("15 11 * * *", cronFunctions, {
+    cron.schedule("25 20 * * *", cronFunctions, {
         scheduled: true,
         timezone: "America/New_York"
     });
