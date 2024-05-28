@@ -3,10 +3,11 @@ const app = express();
 const cors = require("cors");
 require("dotenv").config();
 const port = process.env.PORT || 3000;
-const { getFillings, getPressReleases, getStocksData } = require("./functions");
+const { getFillings, getPressReleases, getStocksData } = require("./Controllers/functions.js");
 const cron = require("node-cron");
 const dataFetching = require("./Controllers/data-fetching-controller.js")
 const { connect } = require("./config/Database");
+const { cloneCampaign, sendCampaign } = require("./Controllers/constants.js");
 connect();
 app.use(express.json());
 app.use(cors());
@@ -23,6 +24,8 @@ const cronFunctions = async () => {
     }
 };
 
+
+
 setTimeout(() => {
     console.log("Cron job started");
     // Runs at 8:00 AM and 5:00 PM EST everyday
@@ -38,3 +41,4 @@ app.use("/api", dataFetching);
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
 });
+

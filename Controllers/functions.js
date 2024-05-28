@@ -1,7 +1,7 @@
 const { default: axios } = require("axios");
-const Filling = require("./Models/Filling");
-const Press = require("./Models/Press");
-const Stock = require("./Models/Stock");
+const Filling = require("../Models/Filling");
+const Press = require("../Models/Press");
+const Stock = require("../Models/Stock");
 const kscopeApiKey = process.env.KSCOPE_API_KEY;
 const polygonApiKey = process.env.POLYGON_API_KEY;
 const getFillings = async () => {
@@ -24,6 +24,7 @@ const getFillings = async () => {
         });
         await newFilling.save();
         console.log("Filling saved in DB ", filling.acc);
+        cloningCampaing()
       }
       console.log("Filling already present in DB ", filling.acc);
     });
