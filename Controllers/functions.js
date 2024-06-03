@@ -78,7 +78,7 @@ const getStocksData = async () => {
     const config = {
       method: "get",
       maxBodyLength: Infinity,
-      url: `https://api.polygon.io/v2/aggs/ticker/LFVN/range/1/day/${twoYearsAgoStr}/${currentDateStr}?adjusted=true&sort=asc&apiKey=${polygonApiKey}`,
+      url: `https://api.polygon.io/v2/aggs/ticker/FTLF/range/1/day/${twoYearsAgoStr}/${currentDateStr}?adjusted=true&sort=asc&apiKey=${polygonApiKey}`,
       headers: {},
     };
     const response = await axios(config);
@@ -93,8 +93,9 @@ const getStocksData = async () => {
         });
         await newStock.save();
         console.log("Stock saved in DB ", stock?.t);
+      }else{
+        console.log("Stock already present in DB ", stock?.t);
       }
-      console.log("Stock already present in DB ", stock?.t);
     });
   } catch (error) {
     console.log("Error in getStocksData", error);
