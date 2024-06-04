@@ -36,6 +36,12 @@ app.get("/api/cron", async (req, res) => {
     }
 });
 
+// setTimeout(() => {
+//     // Runs at 8:00 AM and 5:00 PM EST everyday
+//     // cron.schedule("0 8,17 * * *", cronFunctions);
+//     cron.schedule("* * * * *", cronFunctions);
+// }, 7000);
+
 app.get("/", async (req, res) => {
     res.send("Hello World!");
 });
