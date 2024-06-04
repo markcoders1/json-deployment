@@ -17,7 +17,7 @@ connect();
 app.use(express.json());
 app.use(cors());
 
-app.post("/api/cron", async (req, res) => {
+app.get("/api/cron", async (req, res) => {
     try {
         console.log("Cron job running...");
         await getFillings();
