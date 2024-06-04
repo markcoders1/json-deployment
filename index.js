@@ -25,7 +25,7 @@ app.get("/api/cron", async (req, res) => {
         await getStocksData();
         const cron = new Cron({
             is_ran: true,
-            ran_at: new Date(),
+            // ran_at: new Date(),
         });
         await cron.save();
         console.log("Data has been updated successfully to the DB");
