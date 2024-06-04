@@ -8,16 +8,22 @@ const cron = require("node-cron");
 const dataFetching = require("./Controllers/data-fetching-controller.js")
 const { connect } = require("./config/Database");
 const { cloneCampaign, sendCampaign } = require("./Controllers/constants.js");
+const Cron = require("./Models/Cron.js");
 connect();
 app.use(express.json());
 app.use(cors());
 
 const cronFunctions = async () => {
     try {
-        console.log("Cron job running");
+        console.log("Cron job running...");
         await getFillings();
         await getPressReleases();
         await getStocksData();
+        const cron = new Cron({
+            is_ran: true,
+            ran_at: new Date(),
+        });
+        await cron.save();  
         console.log('Data has been updated successfully to the DB');
     } catch (error) {
         console.log("Error in cronFunctions", error);
@@ -27,9 +33,9 @@ const cronFunctions = async () => {
 
 
 setTimeout(() => {
-    console.log("Cron job started");
     // Runs at 8:00 AM and 5:00 PM EST everyday
-    cron.schedule("0 8,17 * * *", cronFunctions);
+    // cron.schedule("0 8,17 * * *", cronFunctions);
+    cron.schedule("* * * * *", cronFunctions);
 }, 7000);
 
 app.get("/", async (req, res) => {
