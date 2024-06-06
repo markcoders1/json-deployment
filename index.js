@@ -50,6 +50,3 @@ app.use("/api", dataFetching);
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
 });
-
-
-cloningCampaing(2);
