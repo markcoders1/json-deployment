@@ -3,33 +3,41 @@ const app = express();
 const cors = require("cors");
 require("dotenv").config();
 const port = process.env.PORT || 3000;
-const { getFillings, getPressReleases, getStocksData } = require("./Controllers/functions.js");
+const {
+    getFillings,
+    getPressReleases,
+    getStocksData,
+} = require("./Controllers/functions.js");
 const cron = require("node-cron");
-const dataFetching = require("./Controllers/data-fetching-controller.js")
+const dataFetching = require("./Controllers/data-fetching-controller.js");
 const { connect } = require("./config/Database");
-const { cloneCampaign, sendCampaign } = require("./Controllers/constants.js");
 connect();
 app.use(express.json());
 app.use(cors());
 
-const cronFunctions = async () => {
+async function cronFunctions() {
     try {
-        console.log("Cron job running");
+        console.log("Cron job running...");
         await getFillings();
         await getPressReleases();
         await getStocksData();
-        console.log('Data has been updated successfully to the DB');
+        console.log("Data has been updated successfully to the DB");
     } catch (error) {
         console.log("Error in cronFunctions", error);
     }
-};
+}
 
-
-
+async function wakeUp() {
+    try {
+        console.log("Waking up the server...");
+    } catch (error) {
+        console.log("Error in wakeUp", error);
+    }
+}
 setTimeout(() => {
-    console.log("Cron job started");
     // Runs at 8:00 AM and 5:00 PM EST everyday
     cron.schedule("0 8,17 * * *", cronFunctions);
+    cron.schedule("* * * * *", wakeUp);
 }, 7000);
 
 app.get("/", async (req, res) => {
@@ -41,4 +49,3 @@ app.use("/api", dataFetching);
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
 });
-
