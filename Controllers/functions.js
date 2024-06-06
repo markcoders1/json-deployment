@@ -24,9 +24,11 @@ const getFillings = async () => {
         });
         await newFilling.save();
         console.log("Filling saved in DB ", filling.acc);
-        cloningCampaing()
+        cloningCampaing(1);
       }
-      console.log("Filling already present in DB ", filling.acc);
+      else if(isPresent){
+        console.log("Filling already present in DB ", filling.acc);
+      }
     });
   } catch (error) {
     console.log("Error in getFillings", error);
@@ -55,9 +57,12 @@ const getPressReleases = async () => {
             press,
           });
           await newPress.save();
+          cloningCampaing(2);
           console.log("Press saved in DB ", press?.meta?.id);
         }
-        console.log("Press already present in DB ", press?.meta?.id);
+        else if(isPresent){
+          console.log("Press already present in DB ", press?.meta?.id);
+        }
       }
     });
   } catch (error) {
@@ -93,7 +98,7 @@ const getStocksData = async () => {
         });
         await newStock.save();
         console.log("Stock saved in DB ", stock?.t);
-      }else{
+      }else if(isPresent){
         console.log("Stock already present in DB ", stock?.t);
       }
     });

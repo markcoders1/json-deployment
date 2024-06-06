@@ -1,16 +1,34 @@
 const axios = require('axios');
 const klavioApiKey = process.env.KALAVIO_API_KEY;
 
-const cloneCampaign = async () => {
-    const data = JSON.stringify({
-        "data": {
-            "type": "campaign",
-            "attributes": {
-                "new_name": "SEC Filings - Campaign"
-            },
-            "id": "01HYZJXN4WV88JJ11KEQEKM7XR"
-        }
-    });
+const cloneCampaign = async (number) => {
+
+    let data = '';
+
+    if(number === 1){
+        data = JSON.stringify({
+            "data": {
+                "type": "campaign",
+                "attributes": {
+                    "new_name": "SEC Filings - Campaign"
+                },
+                "id": "01HZQ6BV12F93HTHKMEBCKHHKQ"
+            }
+        });
+    }
+
+    else if(number === 2){
+        data = JSON.stringify({
+            "data": {
+                "type": "campaign",
+                "attributes": {
+                    "new_name": "Press Release - Campaign"
+                },
+                "id": "01HZQ8SY66RZ8K5Q65KAQ169CD"
+            }
+        });
+    }
+    
 
     const config = {
         method: 'post',
@@ -77,8 +95,8 @@ const sendCampaign = async (id) => {
     }
 };
 
-const cloningCampaing = async () => {
-    const response = await cloneCampaign();
+const cloningCampaing = async (number) => {
+    const response = await cloneCampaign(number);
     if (response?.success) {
         console.log('Campaign cloned successfully');
         let campaignId = response?.campaignId;

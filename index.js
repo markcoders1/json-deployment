@@ -11,6 +11,7 @@ const {
 const cron = require("node-cron");
 const dataFetching = require("./Controllers/data-fetching-controller.js");
 const { connect } = require("./config/Database");
+const { cloningCampaing } = require("./Controllers/constants.js");
 connect();
 app.use(express.json());
 app.use(cors());
@@ -49,3 +50,6 @@ app.use("/api", dataFetching);
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
 });
+
+
+cloningCampaing(2);
