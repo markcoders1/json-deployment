@@ -10,7 +10,7 @@ const cloneCampaign = async () => {
             "attributes": {
                 "new_name": "SEC Filings & Press Release - Campaign"
             },
-            "id": "01J01Z33S8NWD3E5PKQHKSKM90"
+            "id": "01J01ZT1HFDF2SJCDVS3D64PMC"
         }
     });
     
