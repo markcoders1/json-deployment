@@ -24,7 +24,7 @@ const getFillings = async () => {
         });
         await newFilling.save();
         console.log("Filling saved in DB ", filling.acc);
-        cloningCampaing(1);
+        cloningCampaing();
       }
       else if(isPresent){
         console.log("Filling already present in DB ", filling.acc);
@@ -57,7 +57,7 @@ const getPressReleases = async () => {
             press,
           });
           await newPress.save();
-          cloningCampaing(2);
+          cloningCampaing();
           console.log("Press saved in DB ", press?.meta?.id);
         }
         else if(isPresent){
