@@ -12,6 +12,7 @@ router.get('/sec-fillings', async (req, res) => {
         if( fillings.length > 0 ){
             console.log('Fillings Fetched');
             //fillings.reverse();
+            fillings.sort((a, b) => new Date(b.filling.Date) - new Date(a.filling.Date));
             res.json(fillings);
         }
         else{
