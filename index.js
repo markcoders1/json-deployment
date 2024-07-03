@@ -49,8 +49,8 @@ app.use("/api", dataFetching);
 
 app.post('/stripe-info', async (req, res) => {
     try {
-    const status = req.body.str;
-    const url = req.body.url;
+    const status = req.body.statusStr;
+    const url = req.body.stripeUrl;
     console.log('the status is == ', status, 'with the url', url);
     
     res.send({ received: true });
