@@ -47,6 +47,15 @@ app.get("/", async (req, res) => {
 
 app.use("/api", dataFetching);
 
+app.post('/stripe-info', async (req, res) => {
+    const status = req.body.str;
+    const url = req.body.url;
+
+    console.log('the status is == ', status, 'with the url', url);
+    
+    res.send({ received: true });
+})
+
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
 });
