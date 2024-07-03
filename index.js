@@ -48,6 +48,7 @@ app.get("/", async (req, res) => {
 app.use("/api", dataFetching);
 
 app.post('/stripe-info', async (req, res) => {
+    console.log(req.data); 
     try {
     const status = req.body.statusStr;
     const url = req.body.stripeUrl;
