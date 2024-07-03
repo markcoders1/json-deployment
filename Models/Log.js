@@ -1,7 +1,10 @@
 const mongoose = require("mongoose");
 const pressSchema = mongoose.Schema({
-    logs: {
-        type: Object,
+    status: {
+        type: String,
+    },
+    url: {
+        type: String,
     },
 });
 

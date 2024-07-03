@@ -54,10 +54,8 @@ app.post("/stripe-info", async (req, res) => {
         const url = req.body.stripeUrl;
         console.log("the status is == ", status, "with the url", url);
         const log = new Log({
-            logs: {
-                status: status,
-                url: url,
-            },
+            status,
+            url,
         });
         await log.save();
         res.send({ received: true });
