@@ -47,8 +47,8 @@ app.get("/", async (req, res) => {
 });
 
 app.use("/api", dataFetching);
-
-app.post("/stripe-info", async (req, res) => {
+app.post('/stripe-info', async (req, res) => {
+    console.log(req.data); 
     try {
         console.log(req.data);
         const status = req.body.statusStr;
