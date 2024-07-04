@@ -1,7 +1,7 @@
 const { default: axios } = require("axios");
-const Filling = require("../Models/Filling");
-const Press = require("../Models/Press");
-const Stock = require("../Models/Stock");
+const Filling = require("../../Models/sec-filing-modals/Filling");
+const Press = require("../../Models/sec-filing-modals/Press");
+const Stock = require("../../Models/sec-filing-modals/Stock");
 const kscopeApiKey = process.env.KSCOPE_API_KEY;
 const polygonApiKey = process.env.POLYGON_API_KEY;
 const getFillings = async () => {

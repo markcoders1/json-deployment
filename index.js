@@ -7,12 +7,13 @@ const {
     getFillings,
     getPressReleases,
     getStocksData,
-} = require("./Controllers/functions.js");
+} = require("./Controllers/sec-filings-controllers/functions.js");
 const cron = require("node-cron");
-const dataFetching = require("./Controllers/data-fetching-controller.js");
+const dataFetching = require("./Controllers/sec-filings-controllers/data-fetching-controller.js");
+const stripeInfo = require("./Controllers/esapet-controllers/stripe-info-controller.js");
 const { connect } = require("./config/Database");
-const { cloningCampaing } = require("./Controllers/constants.js");
-const Log = require("./Models/Log.js");
+const { cloningCampaing } = require("./Controllers/sec-filings-controllers/constants.js");
+const Log = require("./Models/esapet-modals/Log.js");
 connect();
 app.use(express.json());
 app.use(cors());
@@ -42,29 +43,17 @@ setTimeout(() => {
     cron.schedule("* * * * *", wakeUp);
 }, 7000);
 
+//MAIN HOME API
 app.get("/", async (req, res) => {
-    res.send("Hello World!");
+    res.send("WELCOME TO MARKCODERS");
 });
 
+//PARENT API FOR SEC FILINGS DATA
 app.use("/api", dataFetching);
-app.post('/stripe-info', async (req, res) => {
-    console.log(req.data); 
-    try {
-        console.log(req.data);
-        const status = req.body.statusStr;
-        const url = req.body.stripeUrl;
-        console.log("the status is == ", status, "with the url", url);
-        const log = new Log({
-            status,
-            url,
-        });
-        await log.save();
-        res.send({ received: true });
-    } catch (error) {
-        console.log("Error recived == ", error);
-        res.send({ received: false });
-    }
-});
+
+//PARENT API FOR ESAPET STRIPE INFO
+app.use('/esapet', stripeInfo);
+
 
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);

@@ -2,9 +2,9 @@ const express = require('express')
 const router = express.Router();
 
 
-const Filling = require('../Models/Filling'); // Update the path
-const Press = require('../Models/Press');
-const Stock = require('../Models/Stock');
+const Filling = require('../../Models/sec-filing-modals/Filling'); // Update the path
+const Press = require('../../Models/sec-filing-modals/Press');
+const Stock = require('../../Models/sec-filing-modals/Stock');
 
 router.get('/sec-fillings', async (req, res) => {
     try {
