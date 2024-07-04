@@ -12,6 +12,7 @@ const cron = require("node-cron");
 const dataFetching = require("./Controllers/data-fetching-controller.js");
 const { connect } = require("./config/Database");
 const { cloningCampaing } = require("./Controllers/constants.js");
+const Log = require("./Models/Log.js");
 connect();
 app.use(express.json());
 app.use(cors());
@@ -46,20 +47,24 @@ app.get("/", async (req, res) => {
 });
 
 app.use("/api", dataFetching);
-
 app.post('/stripe-info', async (req, res) => {
     console.log(req.data); 
     try {
-    const status = req.body.statusStr;
-    const url = req.body.stripeUrl;
-    console.log('the status is == ', status, 'with the url', url);
-    
-    res.send({ received: true });
+        console.log(req.data);
+        const status = req.body.statusStr;
+        const url = req.body.stripeUrl;
+        console.log("the status is == ", status, "with the url", url);
+        const log = new Log({
+            status,
+            url,
+        });
+        await log.save();
+        res.send({ received: true });
     } catch (error) {
-        console.log('Error recived == ', error)
+        console.log("Error recived == ", error);
         res.send({ received: false });
     }
-})
+});
 
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
