@@ -35,12 +35,12 @@ router.get('/get-stripe-info', async (req, res) => {
 
 //insert the data which is recieved using this endpoint 
 router.post('/post-stripe-info', async (req, res) => {
-    console.log(req.body); 
+    console.log('Data Recieved',req.body); 
     const { statusStr, stripeUrl } = req.body;
     try {
         const status = statusStr;
         const url = stripeUrl;
-        console.log("the status is == ", status, "with the url", url);
+        console.log("the status is == ", status, " with the url", url);
         const esapetStripe = new EsapetStripe({
             status,
             url,
