@@ -1,8 +1,11 @@
 const express = require("express");
+//const fetch = require('node-fetch');
 const app = express();
 const cors = require("cors");
 require("dotenv").config();
 const port = process.env.PORT || 3000;
+const EsapetStripe = require('./Models/esapet-modals/Log.js');
+
 const {
     getFillings,
     getPressReleases,
@@ -54,7 +57,18 @@ app.use("/api", dataFetching);
 //PARENT API FOR ESAPET STRIPE INFO
 app.use('/esapet', stripeInfo);
 
+// Delete all Esapet logs 
+// EsapetStripe.deleteMany({}).then(() => {
+//     console.log("All documents deleted");
+// }).catch((err) => {
+//     console.log("Error deleting documents", err);
+// });
+
+// Getting Data for Fitlife Shopify App
+//cronFunctions();
 
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
 });
+
+

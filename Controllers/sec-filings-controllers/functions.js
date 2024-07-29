@@ -2,6 +2,7 @@ const { default: axios } = require("axios");
 const Filling = require("../../Models/sec-filing-modals/Filling");
 const Press = require("../../Models/sec-filing-modals/Press");
 const Stock = require("../../Models/sec-filing-modals/Stock");
+const { cloningCampaing } = require("./constants");
 const kscopeApiKey = process.env.KSCOPE_API_KEY;
 const polygonApiKey = process.env.POLYGON_API_KEY;
 const getFillings = async () => {
@@ -24,7 +25,7 @@ const getFillings = async () => {
         });
         await newFilling.save();
         console.log("Filling saved in DB ", filling.acc);
-        cloningCampaing();
+        cloningCampaing()
       }
       else if(isPresent){
         console.log("Filling already present in DB ", filling.acc);
