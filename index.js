@@ -51,11 +51,13 @@ app.get("/", async (req, res) => {
     res.send("WELCOME TO MARKCODERS");
 });
 
+const sportscardController = require("./Controllers/sportscard-controller.js");
 //PARENT API FOR SEC FILINGS DATA
 app.use("/api", dataFetching);
 
 //PARENT API FOR ESAPET STRIPE INFO
 app.use('/esapet', stripeInfo);
+app.use("/", sportscardController);
 
 // Delete all Esapet logs 
 // EsapetStripe.deleteMany({}).then(() => {
