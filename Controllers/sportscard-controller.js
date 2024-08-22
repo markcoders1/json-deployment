@@ -1,7 +1,7 @@
 const { default: axios } = require("axios");
 const express = require("express");
 const router = express.Router();
-
+const apiKey = process.env.HUBSPOT_API_KEY;
 router.post("/sportscard", async (req, res) => {
     try {
         const config = {
@@ -9,7 +9,7 @@ router.post("/sportscard", async (req, res) => {
             method: "post",
             headers: {
                 "Content-Type": "application/json",
-                Authorization: `Bearer pat-na1-045e6834-df65-400b-b476-4080dc707d48`,
+                Authorization: `Bearer ${apiKey}`,
             },
             data: JSON.stringify(req.body),
         };
