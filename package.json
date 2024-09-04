@@ -30,7 +30,8 @@
     "node-cron": "^3.0.3",
     "node-fetch": "^3.3.2",
     "nodemailer": "^6.9.14",
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "xml2js": "^0.6.2"
   },
   "devDependencies": {
     "@flydotio/dockerfile": "^0.5.7"

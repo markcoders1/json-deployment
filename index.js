@@ -5,6 +5,8 @@ const cors = require("cors");
 require("dotenv").config();
 const port = process.env.PORT || 3000;
 const EsapetStripe = require('./Models/esapet-modals/Log.js');
+const Press = require("./Models/sec-filing-modals/Press.js");
+
 
 const {
     getFillings,
@@ -68,9 +70,11 @@ app.use("/", sportscardController);
 
 // Getting Data for Fitlife Shopify App
 //cronFunctions();
+  
+// Call the function
+//checkAndDeleteDuplicateTitles();
 
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
 });
-
 

@@ -5,6 +5,8 @@ const Stock = require("../../Models/sec-filing-modals/Stock");
 const { cloningCampaing } = require("./constants");
 const kscopeApiKey = process.env.KSCOPE_API_KEY;
 const polygonApiKey = process.env.POLYGON_API_KEY;
+const xml2js = require('xml2js');
+
 const getFillings = async () => {
   try {
     let config = {
@@ -38,38 +40,50 @@ const getFillings = async () => {
 
 const getPressReleases = async () => {
   try {
-    let config = {
-      method: "get",
-      maxBodyLength: Infinity,
-      url: `https://api.kscope.io/v2/news/press-releases/FTLF?key=${kscopeApiKey}`,
-      headers: {},
-    };
-    const response = await axios(config);
-    const pressReleasesFromDB = await Press.find();
-    response?.data?.data?.forEach(async (press) => {
-      if (press?.meta?.stocks?.length == 1 && press?.meta?.stocks[0] === 'FTLF') {
-        console.log("Press is for ==", press?.meta?.stocks[0], 'length of the stocks is == ', press?.meta?.stocks?.length );
-        const isPresent = pressReleasesFromDB.find(
-          (pressFromDB) =>
-            pressFromDB?.press?.meta?.id === press?.meta?.id
-        );
-        if (!isPresent) {
-          const newPress = new Press({
-            press,
-          });
-          await newPress.save();
-          cloningCampaing();
-          console.log("Press saved in DB ", press?.meta?.id);
-        }
-        else if(isPresent){
-          console.log("Press already present in DB ", press?.meta?.id);
-        }
+    const rssFeedUrl = "https://www.globenewswire.com/rssfeed/organization/-00Wf9DRSziJzKOt-iNMNw=="; // Replace with your RSS feed URL
+
+    // Fetch the RSS feed
+    const response = await axios.get(rssFeedUrl, { headers: { 'Content-Type': 'application/xml' } });
+
+    // Parse the XML response
+    const parsedRSS = await xml2js.parseStringPromise(response.data, { explicitArray: false });
+    const pressReleases = parsedRSS?.rss?.channel?.item;
+
+    // Iterate over the parsed press releases
+    const promises = pressReleases.map(async (pressRelease) => {
+      const title = pressRelease.title;
+
+      // Check if the press release title already exists in the database (query DB for each press release)
+      const isPresent = await Press.findOne({ 'press.meta.title': title });
+
+      if (!isPresent) {
+        // If not present, insert the new press release into the database
+        const newPress = new Press({
+          press: {
+            html: pressRelease.link,
+            meta: {
+              author: pressRelease['dc:publisher'], // Accessing the dc:publisher field
+              teaser: pressRelease.description,
+              title: pressRelease.title,
+              updated: pressRelease.pubDate
+            }
+          }
+        });
+        await newPress.save();
+        cloningCampaing();
+        console.log("New press release saved:", title);
+      } else {
+        console.log("Press release already exists:", title);
       }
     });
+
+    // Wait for all promises to resolve
+    await Promise.all(promises);
   } catch (error) {
-    console.log("Error in getPressReleases", error);
+    console.error("Error in parsing RSS feed or saving to DB:", error);
   }
 };
+
 
 const getStocksData = async () => {
   try {
