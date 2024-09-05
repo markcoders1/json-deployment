@@ -26,20 +26,30 @@ router.get('/sec-fillings', async (req, res) => {
 
 router.get('/press-release', async (req, res) => {
     try {
-        const news = await Press.find();
-        if( news.length > 0 ){
-            console.log('News Fetched');
-            // news.reverse();
-            res.json(news);
-        }
-        else{
-            console.log('News not found');
-            res.status(404).json({ message: 'News not found' });
-        }
+      // Fetch all press releases
+      const news = await Press.find();
+  
+      if (news.length > 0) {
+        console.log('News Fetched');
+  
+        // Sort by the 'updated' date, from most recent to oldest
+        news.sort((a, b) => {
+          const dateA = new Date(a.press.meta.updated);
+          const dateB = new Date(b.press.meta.updated);
+          return dateB - dateA; // Most recent first
+        });
+  
+        res.json(news);
+      } else {
+        console.log('News not found');
+        res.status(404).json({ message: 'News not found' });
+      }
     } catch (error) {
-        res.status(500).json({ message: error.message });
+      res.status(500).json({ message: error.message });
     }
-});
+  });
+  
+  
 
 
 router.get('/stock-quote', async (req, res) => {

@@ -38,6 +38,11 @@ const getFillings = async () => {
   }
 };
 
+const normalizeTitle = (title) => {
+  return title.trim().replace(/\s+/g, ' '); // Trim and replace multiple spaces with a single space
+};
+
+
 const getPressReleases = async () => {
   try {
     const rssFeedUrl = "https://www.globenewswire.com/rssfeed/organization/-00Wf9DRSziJzKOt-iNMNw=="; // Replace with your RSS feed URL
@@ -51,10 +56,10 @@ const getPressReleases = async () => {
 
     // Iterate over the parsed press releases
     const promises = pressReleases.map(async (pressRelease) => {
-      const title = pressRelease.title;
+      const normalizedTitle = normalizeTitle(pressRelease.title); // Normalize the title
 
-      // Check if the press release title already exists in the database (query DB for each press release)
-      const isPresent = await Press.findOne({ 'press.meta.title': title });
+      // Check if the press release title already exists in the database
+      const isPresent = await Press.findOne({ 'press.meta.title': normalizedTitle });
 
       if (!isPresent) {
         // If not present, insert the new press release into the database
@@ -62,18 +67,18 @@ const getPressReleases = async () => {
           press: {
             html: pressRelease.link,
             meta: {
-              author: pressRelease['dc:publisher'], // Accessing the dc:publisher field
+              author: pressRelease['dc:publisher'],
               teaser: pressRelease.description,
-              title: pressRelease.title,
+              title: normalizedTitle, // Store the normalized title
               updated: pressRelease.pubDate
             }
           }
         });
         await newPress.save();
+        console.log("New press release saved:", normalizedTitle);
         cloningCampaing();
-        console.log("New press release saved:", title);
       } else {
-        console.log("Press release already exists:", title);
+        console.log("Press release already exists:", normalizedTitle);
       }
     });
 
@@ -83,6 +88,7 @@ const getPressReleases = async () => {
     console.error("Error in parsing RSS feed or saving to DB:", error);
   }
 };
+
 
 
 const getStocksData = async () => {
