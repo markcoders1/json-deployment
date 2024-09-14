@@ -46,7 +46,7 @@ router.post("/sportscard", async (req, res) => {
         // Step 1: Send the registration data to the Laravel /register endpoint
         const registerResponse = await axios.post('https://demo.sportscard.icu/register', {
             first_name: data.firstname,
-            last_name: data.lastname,
+            last_name: data.lastname || "Doe",
             email: data.email,
             password: password,  // Use the generated password
             password_confirmation: password,
@@ -58,7 +58,7 @@ router.post("/sportscard", async (req, res) => {
             }
         });
 
-        console.log('User registered successfully:', registerResponse.data);
+        //console.log('User registered successfully:', registerResponse.data);
 
         // Send the generated password to the user's email
         await sendPasswordEmail(data.email, password);
