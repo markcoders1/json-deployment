@@ -65,31 +65,31 @@ router.post("/sportscard", async (req, res) => {
 
         registerResponse.data ? console.log('User registered successfully:') : console.log('User not registered');
 
-        // Send the generated password to the user's email
-         await sendPasswordEmail(data.email, password, request_token);
+        // // Send the generated password to the user's email
+        //  await sendPasswordEmail(data.email, password, request_token);
 
-        // // Step 2: If the user is successfully created, send data to HubSpot
-        const config = {
-            url: "https://api.hubapi.com/crm/v3/objects/contacts/",
-            method: "post",
-            headers: {
-                "Content-Type": "application/json",
-                Authorization: `Bearer ${apiKey}`,
-            },
-            data: JSON.stringify(req.body),
-        };
+        // // // Step 2: If the user is successfully created, send data to HubSpot
+        // const config = {
+        //     url: "https://api.hubapi.com/crm/v3/objects/contacts/",
+        //     method: "post",
+        //     headers: {
+        //         "Content-Type": "application/json",
+        //         Authorization: `Bearer ${apiKey}`,
+        //     },
+        //     data: JSON.stringify(req.body),
+        // };
 
-        const hubspotResponse = await axios.request(config);
-        console.log('HubSpot response:', hubspotResponse.data);
+        // const hubspotResponse = await axios.request(config);
+        // console.log('HubSpot response:', hubspotResponse.data);
 
-        // Step 3: Send a success response back to the client
-        res.json(hubspotResponse.data);
+        // // Step 3: Send a success response back to the client
+        // res.json(hubspotResponse.data);
     } catch (error) {
         console.log('Error:', error?.response?.data.message);
 
         // If the error occurred during the registration step, respond accordingly
         if (error?.response?.status !== 500) {
-            return res.status(400).json({ message: "Registration failed", details: error.response.data });
+            return res.status(400).json({ message: "Registration failed", details: error?.response?.data.message });
         }
 
         if (error?.response?.status === 500) {
