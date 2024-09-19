@@ -64,7 +64,6 @@ router.post("/sportscard", async (req, res) => {
         });
 
         registerResponse.data ? console.log('User registered successfully:') : console.log('User not registered');
-        ;
 
         // Send the generated password to the user's email
          await sendPasswordEmail(data.email, password, request_token);
@@ -88,8 +87,8 @@ router.post("/sportscard", async (req, res) => {
     } catch (error) {
         console.log('Error:', error?.response?.data.message);
 
-        if ( error?.response?.data?.status === 422) {
-            return res.status(422).json({ message: "Email already exists" });
+        if ( error?.response?.data?.status !== 400 || error?.response?.data?.status !== 500 ) {
+            return res.json({ message: "Email already exists" });
         }
 
         // If the error occurred during the registration step, respond accordingly
