@@ -17,7 +17,9 @@ function generateRandomPassword(length = 10) {
 
 // Function to send an email with the generated password
 async function sendPasswordEmail(userEmail, password, request_token) {
-    const senderEmail = 'huzefa.markcoders@gmail.com';
+
+    try {
+        const senderEmail = 'huzefa.markcoders@gmail.com';
     const senderPassword = 'dwtzeexfoklkbazr'
     const transporter = nodemailer.createTransport({
         service: 'gmail', // Or use another email service
@@ -35,69 +37,114 @@ async function sendPasswordEmail(userEmail, password, request_token) {
     };
 
     await transporter.sendMail(mailOptions);
+    return true;
+    } catch (error) {
+        console.error('Error sending email:', error.message);
+        return false;
+    }
+
+    
 }
 
+// Main route
 router.post("/sportscard", async (req, res) => {
     try {
-        // Generate a random password
+        const data = req.body.properties;
+        console.log('Data received from the request:', data);
+
         const password = generateRandomPassword();
         const request_token = uuidv4();
-        const data = req.body.properties;
-        console.log('data came from the request == ', data);
-        // Step 1: Send the registration data to the Laravel /register endpoint
-        const registerResponse = await axios.post('https://demo.sportscard.icu/register', {
+
+        // Step 1: Register the user in Laravel
+        const registerResponse = await registerUserInLaravel(data, password, request_token, res);
+
+        // If registration is successful, proceed to Step 2
+        if (registerResponse) {
+            // Step 2: Send the generated password via email
+            const emailResponse = await sendPasswordEmail(data.email, password, request_token);
+
+            // If email sending is successful, proceed to Step 3
+            if (emailResponse) {
+                // Step 3: Add user to HubSpot
+                const hubspotResponse = await addUserToHubSpot(req.body);
+                console.log('HubSpot response:', hubspotResponse);
+
+                // Step 4: Send a success response back to the client
+                return res.json(hubspotResponse);
+            } else {
+                // If email fails, send an error response
+                return res.status(500).json({ message: "Email sending failed" });
+            }
+        } else {
+            // If registration fails, send an error response
+            return res.status(400).json({ message: "User registration failed" });
+        }
+    } catch (error) {
+        handleError(error, res);
+    }
+});
+
+// Function to handle errors and provide feedback
+function handleError(error, res) {
+    console.log('Error:', error?.response?.data?.message || error.message);
+    
+    if (error?.response?.status !== 500) {
+        return res.status(400).json({ message: "Request failed", details: error?.response?.data?.message || error.message });
+    }
+    
+    res.status(500).json({ message: "Internal server error", details: error.message });
+}
+
+// Function to register a user in Laravel
+async function registerUserInLaravel(data, password, request_token, res) {
+    try {
+        const response = await axios.post('https://demo.sportscard.icu/register', {
             form_type: data.form_type,
             first_name: data.firstname,
             last_name: data.lastname,
             is_admin: 1,
             region_code: 1,
             email: data.email,
-            password: password,  // Use the generated password
+            password: password,
             password_confirmation: password,
-            term_policy_check:true,
-            referral_code: data.referral_code || null,  // Optional
+            term_policy_check: true,
+            referral_code: data.referral_code || null,
             request_token: request_token
         }, {
-            headers: {
-                "Content-Type": "application/json",
-            }
+            headers: { "Content-Type": "application/json" }
         });
 
-        registerResponse.data ? console.log('User registered successfully:') : console.log('User not registered');
-
-        // // Send the generated password to the user's email
-        //  await sendPasswordEmail(data.email, password, request_token);
-
-        // // // Step 2: If the user is successfully created, send data to HubSpot
-        // const config = {
-        //     url: "https://api.hubapi.com/crm/v3/objects/contacts/",
-        //     method: "post",
-        //     headers: {
-        //         "Content-Type": "application/json",
-        //         Authorization: `Bearer ${apiKey}`,
-        //     },
-        //     data: JSON.stringify(req.body),
-        // };
-
-        // const hubspotResponse = await axios.request(config);
-        // console.log('HubSpot response:', hubspotResponse.data);
-
-        // // Step 3: Send a success response back to the client
-        // res.json(hubspotResponse.data);
+        if (response.data) {
+            console.log('User registered in Laravel');
+            return response.data;
+        }
     } catch (error) {
-        console.log('Error:', error?.response?.data.message);
-
-        // If the error occurred during the registration step, respond accordingly
-        if (error?.response?.status !== 500) {
-            return res.status(400).json({ message: "Registration failed", details: error?.response?.data.message });
-        }
-
-        if (error?.response?.status === 500) {
-        // If the error occurred during the HubSpot step, respond accordingly
-        res.status(500).json({ message: "Internal server error", details: error.message });
-        }
+        console.error('Error registering user in Laravel:', error?.response?.data?.message || error.message);
+        return null;
     }
-});
+}
+
+// Function to add user data to HubSpot
+async function addUserToHubSpot(requestBody) {
+    try {
+        const config = {
+            url: "https://api.hubapi.com/crm/v3/objects/contacts/",
+            method: "post",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${apiKey}`,
+            },
+            data: JSON.stringify(requestBody),
+        };
+
+        const response = await axios.request(config);
+        console.log('User added to HubSpot');
+        return response.data;
+    } catch (error) {
+        console.error('Error adding user to HubSpot:', error?.response?.data?.message || error.message);
+        throw error;
+    }
+}
 
 // POST endpoint to update 'last_login' field in HubSpot for a given email
 router.post("/update-last-login", async (req, res) => {
