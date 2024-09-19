@@ -87,12 +87,8 @@ router.post("/sportscard", async (req, res) => {
     } catch (error) {
         console.log('Error:', error?.response?.data.message);
 
-        if ( error?.response?.data?.status !== 400 || error?.response?.data?.status !== 500 ) {
-            return res.json({ message: "Email already exists" });
-        }
-
         // If the error occurred during the registration step, respond accordingly
-        if (error?.response?.status === 400) {
+        if (error?.response?.status !== 500) {
             return res.status(400).json({ message: "Registration failed", details: error.response.data });
         }
 
