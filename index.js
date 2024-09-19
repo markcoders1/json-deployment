@@ -7,6 +7,13 @@ const port = process.env.PORT || 3000;
 const EsapetStripe = require('./Models/esapet-modals/Log.js');
 const Press = require("./Models/sec-filing-modals/Press.js");
 
+// Define allowed origins
+const corsOptions = {
+    origin: "https://demo.sportscard.icu", // Replace with the actual frontend domain
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true, // Allow sending cookies
+    allowedHeaders: ["Content-Type", "Authorization"] // Define allowed headers
+  };
 
 const {
     getFillings,
@@ -21,7 +28,7 @@ const { cloningCampaing } = require("./Controllers/sec-filings-controllers/const
 const Log = require("./Models/esapet-modals/Log.js");
 connect();
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 async function cronFunctions() {
     try {
