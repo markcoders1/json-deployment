@@ -23,6 +23,7 @@ const {
 const cron = require("node-cron");
 const dataFetching = require("./Controllers/sec-filings-controllers/data-fetching-controller.js");
 const stripeInfo = require("./Controllers/esapet-controllers/stripe-info-controller.js");
+const getAnalytics = require("./Controllers/first-time-controller/get-analytics.js");
 const { connect } = require("./config/Database");
 const { cloningCampaing } = require("./Controllers/sec-filings-controllers/constants.js");
 const Log = require("./Models/esapet-modals/Log.js");
@@ -67,6 +68,7 @@ app.use("/api", dataFetching);
 //PARENT API FOR ESAPET STRIPE INFO
 app.use('/esapet', stripeInfo);
 app.use("/", sportscardController);
+app.use("/", getAnalytics);
 
 // Delete all Esapet logs 
 // EsapetStripe.deleteMany({}).then(() => {
