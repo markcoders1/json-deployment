@@ -1,22 +1,45 @@
 const { google } = require("googleapis");
 const { BetaAnalyticsDataClient } = require("@google-analytics/data");
 const express = require("express"); // Import express
+const { default: axios } = require("axios");
 const router = express.Router(); // Initialize the router
 
-const propertyId = '269691212';
-// Load your credentials (service account JSON)
-const serviceAccount = require("./firstteam-analytics-551df02945c7.json");
+const propertyId = "269691212";
 
-// Initialize the Google Auth client
-const auth = new google.auth.GoogleAuth({
-    keyFile: "https://test.markcoders.com/first-team/firstteam-analytics.json", // Path to your service account file
-    scopes: ["https://www.googleapis.com/auth/analytics.readonly"], // Read-only access
-});
+let analyticsDataClient;
+// Fetch the serviceAccount JSON dynamically
+async function initializeAnalytics() {
+    try {
+        // Fetch the service account JSON from the URL
+        const response = await axios.get(
+            "https://test.markcoders.com/first-team/firstteam-analytics.json"
+        );
+        const serviceAccount = response.data;
 
-// Initialize the BetaAnalyticsDataClient
-const analyticsDataClient = new BetaAnalyticsDataClient({
-    credentials: serviceAccount,
-});
+        // Initialize Google Auth with the fetched service account credentials
+        const auth = new google.auth.GoogleAuth({
+            credentials: serviceAccount, // Use the fetched credentials
+            scopes: ["https://www.googleapis.com/auth/analytics.readonly"], // Read-only access
+        });
+
+        // Initialize the BetaAnalyticsDataClient with the fetched credentials
+        analyticsDataClient = new BetaAnalyticsDataClient({
+            credentials: serviceAccount, // Use the fetched service account credentials
+        });
+
+        console.log("Analytics client initialized successfully");
+
+        // Now you can proceed to make calls with the analyticsDataClient
+    } catch (error) {
+        console.error(
+            "Error fetching service account or initializing analytics:",
+            error
+        );
+    }
+}
+
+// Call the function to initialize and use the analytics client
+initializeAnalytics();
 
 // Helper function to calculate the date range for the last two months
 function getDateRange(req) {
@@ -84,7 +107,10 @@ async function fetchGAInsights(req) {
 
             return sortedData;
         } else {
-            return { message: "No data available for the selected dimensions and metrics." };
+            return {
+                message:
+                    "No data available for the selected dimensions and metrics.",
+            };
         }
     } catch (error) {
         console.error("Error fetching Google Analytics data:", error);
