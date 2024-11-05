@@ -6,6 +6,7 @@ require("dotenv").config();
 const port = process.env.PORT || 3000;
 const EsapetStripe = require('./Models/esapet-modals/Log.js');
 const Press = require("./Models/sec-filing-modals/Press.js");
+const morgan = require("morgan")
 
 // Define allowed origins
 const corsOptions = {
@@ -30,6 +31,8 @@ const Log = require("./Models/esapet-modals/Log.js");
 connect();
 app.use(express.json());
 app.use(cors(corsOptions));
+
+app.use(morgan('tiny'))
 
 async function cronFunctions() {
     try {
