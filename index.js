@@ -9,11 +9,11 @@ const Press = require("./Models/sec-filing-modals/Press.js");
 
 // Define allowed origins
 const corsOptions = {
-    origin: ["https://demo.sportscard.icu", 'http://localhost', 'https://corsproxy.io'], // Replace with the actual frontend domain
+    origin: true, // Allow all origins
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true, // Allow sending cookies
     allowedHeaders: ["Content-Type", "Authorization"] // Define allowed headers
-  };
+};
 
 const {
     getFillings,
