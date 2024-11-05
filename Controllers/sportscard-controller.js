@@ -109,7 +109,8 @@ async function registerUserInLaravel(data, password, request_token, res) {
             password_confirmation: password,
             term_policy_check: true,
             referral_code: data.referral_code || null,
-            request_token: request_token
+            request_token: request_token,
+            contact:data.mobilephone 
         }, {
             headers: { "Content-Type": "application/json" }
         });
