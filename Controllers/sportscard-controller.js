@@ -58,6 +58,8 @@ router.post("/sportscard", async (req, res) => {
         // Step 1: Register the user in Laravel
         const registerResponse = await registerUserInLaravel(data, password, request_token, res);
 
+        console.log(registerResponse)
+
         // If registration is successful, proceed to Step 2
         if (registerResponse) {
             // Step 2: Send the generated password via email
