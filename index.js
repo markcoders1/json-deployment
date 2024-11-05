@@ -10,7 +10,7 @@ const morgan = require("morgan")
 
 // Define allowed origins
 const corsOptions = {
-    origin: true, // Replace with the actual frontend domain
+    origin: "https://demo.sportscard.icu", // Replace with the actual frontend domain
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true, // Allow sending cookies
     allowedHeaders: ["Content-Type", "Authorization"] // Define allowed headers
