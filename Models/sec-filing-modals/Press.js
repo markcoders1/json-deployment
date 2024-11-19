@@ -1,7 +1,24 @@
 const mongoose = require("mongoose");
 const pressSchema = mongoose.Schema({
-    press: {
-        type: Object,
+    html: {
+        type: String,
+    },
+    author: {
+        type: String,
+    },
+    teaser: {
+        type: String,
+    },
+    title: {
+        type: String,
+        unique: true,
+    },
+    updated: {
+        type: String,
+    },
+    created_at: {
+        type: Date,
+        default: Date.now,
     },
 });
 

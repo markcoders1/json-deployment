@@ -4,14 +4,14 @@ const app = express();
 const cors = require("cors");
 require("dotenv").config();
 const port = process.env.PORT || 3000;
-const morgan = require("morgan")
+const morgan = require("morgan");
 
 // Define allowed origins
 const corsOptions = {
     origin: "*", // Replace with the actual frontend domain
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true, // Allow sending cookies
-    allowedHeaders: ["Content-Type", "Authorization"] // Define allowed headers
+    allowedHeaders: ["Content-Type", "Authorization"], // Define allowed headers
 };
 
 const {
@@ -34,7 +34,6 @@ async function cronFunctions() {
         await getFillings();
         await getPressReleases();
         await getStocksData();
-        console.log("Data has been updated successfully to the DB");
     } catch (error) {
         console.log("Error in cronFunctions", error);
     }
@@ -56,4 +55,3 @@ app.use("/api", dataFetching);
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
 });
-

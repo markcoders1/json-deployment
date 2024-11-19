@@ -81,21 +81,27 @@ const sendCampaign = async (id) => {
 };
 
 const cloningCampaing = async () => {
+    // const response = await cloneCampaign();
+    // if (response?.success) {
+    //     console.log('Campaign cloned successfully');
+    //     let campaignId = response?.campaignId;
+    //     setTimeout(async () => {
+    //         const campaign_send_response = await sendCampaign(campaignId);
+    //         if (campaign_send_response?.success) {
+    //             console.log(campaign_send_response?.message);
+    //         } else {
+    //             console.log(campaign_send_response?.message);
+    //         }
+    //     }, 0);
+    // } else {
+    //     console.log(response?.message);
+    // }
     const response = await cloneCampaign();
-    if (response?.success) {
-        console.log('Campaign cloned successfully');
-        let campaignId = response?.campaignId;
-        setTimeout(async () => {
-            const campaign_send_response = await sendCampaign(campaignId);
-            if (campaign_send_response?.success) {
-                console.log(campaign_send_response?.message);
-            } else {
-                console.log(campaign_send_response?.message);
-            }
-        }, 0);
-    } else {
-        console.log(response?.message);
+    if (response.success) {
+        const sendCampaignResponse = await sendCampaign(response.campaignId);
+        return sendCampaignResponse;
     }
+    return response;
 };
 
 module.exports = {
