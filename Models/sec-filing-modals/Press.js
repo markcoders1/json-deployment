@@ -1,5 +1,9 @@
 const mongoose = require("mongoose");
 const pressSchema = mongoose.Schema({
+    press_id: {
+        type: String,
+        unique: true,
+    },
     html: {
         type: String,
     },
@@ -11,7 +15,6 @@ const pressSchema = mongoose.Schema({
     },
     title: {
         type: String,
-        unique: true,
     },
     updated: {
         type: String,

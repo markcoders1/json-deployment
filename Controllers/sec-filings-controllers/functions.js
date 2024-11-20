@@ -43,17 +43,16 @@ const normalizeTitle = (title) => {
 };
 
 const processPressRelease = async (pressRelease) => {
-  const normalizedTitle = normalizeTitle(pressRelease.title);
-  const isPresent = await Press.findOne({ title: normalizedTitle });
-  console.log(`Press Release already exists: ${normalizedTitle}`);
+  const isPresent = await Press.findOne({ press_id: pressRelease['dc:identifier'] });
   if (!isPresent) {
-    console.log(`New press release: ${normalizedTitle}`);
+    console.log(`New press release: ${pressRelease.title}`);
       // Save and clone campaign
       const newPress = new Press({
+        press_id:pressRelease['dc:identifier'],
         html:pressRelease.link,
         author:pressRelease['dc:publisher'],
         teaser:pressRelease.description,
-        title:normalizedTitle,
+        title:pressRelease.title,
         updated:pressRelease.pubDate
       })
       await newPress.save();

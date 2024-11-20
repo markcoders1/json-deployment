@@ -31,9 +31,9 @@ app.use(morgan('tiny'))
 async function cronFunctions() {
     try {
         console.log("Cron job running...");
-        await getFillings();
+        // await getFillings();
         await getPressReleases();
-        await getStocksData();
+        // await getStocksData();
     } catch (error) {
         console.log("Error in cronFunctions", error);
     }
@@ -41,7 +41,7 @@ async function cronFunctions() {
 
 setTimeout(() => {
     // Runs at 8:00 AM and 5:00 PM EST everyday
-    cron.schedule("0 8,17 * * *", cronFunctions);
+    cron.schedule("* * * * *", cronFunctions);
 }, 7000);
 
 //MAIN HOME API
