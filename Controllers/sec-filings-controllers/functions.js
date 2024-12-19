@@ -42,6 +42,24 @@ const normalizeTitle = (title) => {
   return title.trim().replace(/\s+/g, ' '); // Trim and replace multiple spaces with a single space
 };
 
+const processPressRelease = async (pressRelease) => {
+  const isPresent = await Press.findOne({ press_id: pressRelease['dc:identifier'] });
+  if (!isPresent) {
+    console.log(`New press release: ${pressRelease.title}`);
+      // Save and clone campaign
+      const newPress = new Press({
+        press_id:pressRelease['dc:identifier'],
+        html:pressRelease.link,
+        author:pressRelease['dc:publisher'],
+        teaser:pressRelease.description,
+        title:pressRelease.title,
+        updated:pressRelease.pubDate
+      })
+      await newPress.save();
+      const res = await cloningCampaing();
+      console.log("res", res);
+  }
+};
 
 const getPressReleases = async () => {
   try {
@@ -55,35 +73,10 @@ const getPressReleases = async () => {
     const pressReleases = parsedRSS?.rss?.channel?.item;
 
     // Iterate over the parsed press releases
-    const promises = pressReleases.map(async (pressRelease) => {
-      const normalizedTitle = normalizeTitle(pressRelease.title); // Normalize the title
-
-      // Check if the press release title already exists in the database
-      const isPresent = await Press.findOne({ 'press.meta.title': normalizedTitle });
-
-      if (!isPresent) {
-        // If not present, insert the new press release into the database
-        const newPress = new Press({
-          press: {
-            html: pressRelease.link,
-            meta: {
-              author: pressRelease['dc:publisher'],
-              teaser: pressRelease.description,
-              title: normalizedTitle, // Store the normalized title
-              updated: pressRelease.pubDate
-            }
-          }
-        });
-        await newPress.save();
-        console.log("New press release saved:", normalizedTitle);
-        cloningCampaing();
-      } else {
-        console.log("Press release already exists:", normalizedTitle);
-      }
-    });
-
-    // Wait for all promises to resolve
-    await Promise.all(promises);
+    for (const pressRelease of pressReleases) {
+      await processPressRelease(pressRelease);
+    }
+    
   } catch (error) {
     console.error("Error in parsing RSS feed or saving to DB:", error);
   }

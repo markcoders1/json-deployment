@@ -34,8 +34,8 @@ router.get('/press-release', async (req, res) => {
   
         // Sort by the 'updated' date, from most recent to oldest
         news.sort((a, b) => {
-          const dateA = new Date(a.press.meta.updated);
-          const dateB = new Date(b.press.meta.updated);
+          const dateA = new Date(a.updated);
+          const dateB = new Date(b.updated);
           return dateB - dateA; // Most recent first
         });
   
