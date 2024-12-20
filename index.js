@@ -42,7 +42,7 @@ async function cronFunctions() {
 setTimeout(() => {
     // Runs at 8:00 AM and 5:00 PM EST everyday
     cron.schedule("0 7,10,12,14,16,18,21,1,4 * * *", cronFunctions);
-    cron.schedule("* * * * *", wakeUp);
+    // cron.schedule("* * * * *", wakeUp);
 }, 7000);
 
 //MAIN HOME API
