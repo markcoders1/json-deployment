@@ -22,7 +22,7 @@ app.use(cors(corsOptions));
 app.use(morgan('tiny'))
 
 //MAIN HOME API
-app.get("/", async (req, res) => {
+app.get("/home", async (req, res) => {
     res.send("WELCOME TO MARKCODERS");
 });
 
