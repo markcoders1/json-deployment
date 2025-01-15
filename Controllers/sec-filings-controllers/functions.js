@@ -2,6 +2,7 @@ const { default: axios } = require("axios");
 const Filling = require("../../Models/sec-filing-modals/Filling");
 const Press = require("../../Models/sec-filing-modals/Press");
 const Stock = require("../../Models/sec-filing-modals/Stock");
+const Logs = require("../../Models/sec-filing-modals/Logs");
 const { cloningCampaing } = require("./constants");
 const kscopeApiKey = process.env.KSCOPE_API_KEY;
 const polygonApiKey = process.env.POLYGON_API_KEY;
@@ -27,7 +28,17 @@ const getFillings = async () => {
         });
         await newFilling.save();
         console.log("Filling saved in DB ", filling.acc);
-        cloningCampaing()
+        const res = await cloningCampaing();
+        if(res.campaignId){
+          const newLog = new Logs({
+            doc_id: filling.acc,
+            doc_type: "sec-filling",
+            title: filling.Form_Desc,
+            campaignId: res.campaignId
+          });
+          await newLog.save();
+        }
+        console.log("res", res);
       }
       else if(isPresent){
         console.log("Filling already present in DB ", filling.acc);
@@ -36,10 +47,6 @@ const getFillings = async () => {
   } catch (error) {
     console.log("Error in getFillings", error);
   }
-};
-
-const normalizeTitle = (title) => {
-  return title.trim().replace(/\s+/g, ' '); // Trim and replace multiple spaces with a single space
 };
 
 const processPressRelease = async (pressRelease) => {
@@ -57,7 +64,19 @@ const processPressRelease = async (pressRelease) => {
       })
       await newPress.save();
       const res = await cloningCampaing();
+      if(res.campaignId){
+        const newLog = new Logs({
+          doc_id: pressRelease['dc:identifier'],
+          doc_type: "press-release",
+          title: pressRelease.title,
+          campaignId: res.campaignId
+        });
+        await newLog.save();
+      }
       console.log("res", res);
+  }
+  else{
+    console.log(`Press release already present: ${pressRelease.title}`);
   }
 };
 

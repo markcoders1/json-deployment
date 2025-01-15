@@ -1,5 +1,12 @@
 const axios = require('axios');
+const Bottleneck = require('bottleneck');
+
+// Klaviyo API key and bottleneck setup
 const klavioApiKey = process.env.KALAVIO_API_KEY;
+const limiter = new Bottleneck({
+    minTime: 333, // Adjust based on API limit (3 requests per second here)
+    maxConcurrent: 1, // Process one clone operation at a time
+});
 
 const cloneCampaign = async () => {
 
@@ -10,38 +17,38 @@ const cloneCampaign = async () => {
             "attributes": {
                 "new_name": "SEC Filings & Press Release - Campaign"
             },
-            "id": "01J6Z6AR6CXM4JPK3H2Q4MVGG9"
+            // Test Campaign Id to Clone
+            "id": "01JFK2E729665RCA617B7B4AEF"
+            // Production Campaign Id to Clone
+            // "id": "01J6Z6AR6CXM4JPK3H2Q4MVGG9"
         }
     });
-    
 
     const config = {
         method: 'post',
         maxBodyLength: Infinity,
         url: 'https://a.klaviyo.com/api/campaign-clone',
         headers: { 
-            'Revision': '2024-05-15', 
+            'Revision': '2024-10-15', 
             'Content-Type': 'application/json', 
             'Authorization': `Klaviyo-API-Key ${klavioApiKey}`
         },
         data: data
     };
 
-    try {
-        const response = await axios.request(config);
-        console.log(response?.data?.data?.id);
-        return {
+    // Wrap axios call with the limiter to enforce rate limiting
+    return limiter.schedule(() => axios.request(config))
+        .then(response => ({
             success: true,
             message: 'Campaign cloned successfully!',
-            campaignId: response?.data?.data?.id
-        };
-    } catch (error) {
-        return {
+            campaignId: response.data.data.id
+        }))
+        .catch(error => ({
             success: false,
             message: 'Failed to clone campaign',
             error: error.toString()
-        };
-    }
+        }));
+
 };
 
 const sendCampaign = async (id) => {
@@ -58,7 +65,7 @@ const sendCampaign = async (id) => {
         maxBodyLength: Infinity,
         url: 'https://a.klaviyo.com/api/campaign-send-jobs',
         headers: { 
-            'Revision': '2024-05-15', 
+            'Revision': '2024-10-15', 
             'Content-Type': 'application/json', 
             'Authorization': `Klaviyo-API-Key ${klavioApiKey}`
         },
@@ -72,6 +79,7 @@ const sendCampaign = async (id) => {
             message: 'Campaign Queued successfully!'
         };
     } catch (error) {
+        console.error('Error queuing campaign:', error.response?.data || error.toString());
         return {
             success: false,
             message: 'Failed to queue campaign',
@@ -81,25 +89,17 @@ const sendCampaign = async (id) => {
 };
 
 const cloningCampaing = async () => {
-    // const response = await cloneCampaign();
-    // if (response?.success) {
-    //     console.log('Campaign cloned successfully');
-    //     let campaignId = response?.campaignId;
-    //     setTimeout(async () => {
-    //         const campaign_send_response = await sendCampaign(campaignId);
-    //         if (campaign_send_response?.success) {
-    //             console.log(campaign_send_response?.message);
-    //         } else {
-    //             console.log(campaign_send_response?.message);
-    //         }
-    //     }, 0);
-    // } else {
-    //     console.log(response?.message);
-    // }
-    const response = await cloneCampaign();
+    const response = await cloneCampaign(); // Assuming you will get campaign ID as needed
     if (response.success) {
-        const sendCampaignResponse = await sendCampaign(response.campaignId);
-        return sendCampaignResponse;
+        if (response.campaignId) {
+            const sendCampaignResponse = await sendCampaign(response.campaignId);
+            return sendCampaignResponse;
+        } else {
+            return {
+                success: false,
+                message: 'Cloned campaign ID is invalid or missing',
+            };
+        }
     }
     return response;
 };
