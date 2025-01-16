@@ -33,7 +33,7 @@ async function sendPasswordEmail(userEmail, password, request_token) {
         from: senderEmail,
         to: userEmail,
         subject: 'Sportscard Demo Account Credentials',
-        text: `Your account has been created successfully. Here is your password: ${password} \n Please goto https://demo.sportscard.icu/login?request-token=${request_token} and add login details`
+        text: `Your account has been created successfully. Here is your password: ${password} \n Please goto http://127.0.0.1:8000/login?request-token=${request_token} and add login details`
     };
 
     await transporter.sendMail(mailOptions);
@@ -100,7 +100,7 @@ function handleError(error, res) {
 // Function to register a user in Laravel
 async function registerUserInLaravel(data, password, request_token, res) {
     try {
-        const response = await axios.post('https://demo.sportscard.icu/register', {
+        const response = await axios.post('http://127.0.0.1:8000/register', {
             form_type: data.form_type,
             first_name: data.firstname,
             last_name: data.lastname,
