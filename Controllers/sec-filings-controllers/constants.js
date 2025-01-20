@@ -18,9 +18,9 @@ const cloneCampaign = async () => {
                 "new_name": "SEC Filings & Press Release - Campaign"
             },
             // Test Campaign Id to Clone
-            "id": "01JFK2E729665RCA617B7B4AEF"
+            //"id": "01JFK2E729665RCA617B7B4AEF"
             // Production Campaign Id to Clone
-            // "id": "01J6Z6AR6CXM4JPK3H2Q4MVGG9"
+            "id": "01J6Z6AR6CXM4JPK3H2Q4MVGG9"
         }
     });
 
