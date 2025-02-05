@@ -34,7 +34,6 @@ async function cronFunctions() {
     try {
         console.log("Cron job running...");
         await getFillings();
-        await getPressReleases();
         await getStocksData();
     } catch (error) {
         console.log("Error in cronFunctions", error);
@@ -80,8 +79,19 @@ setTimeout(() => {
         scheduled: true,
         timezone: "America/New_York"
     });
+
+
+    // Schedule the cron job for getPressReleases to run every 30 minutes
+    cron.schedule("*/30 * * * *", async () => {
+        console.log('getPressReleases function executed.');
+        await getPressReleases();
+    }, {
+        scheduled: true,
+        timezone: "America/New_York"
+    });
     console.log('Cron job has been scheduled.');
 }, 10000);
+
 
 // async function checkForDuplicates() {
 //     const hasDuplicates = await Filling.checkForDuplicates();

@@ -76,7 +76,8 @@ const sendCampaign = async (id) => {
         await axios.request(config);
         return {
             success: true,
-            message: 'Campaign Queued successfully!'
+            message: 'Campaign Queued successfully!',
+            campaignId: id
         };
     } catch (error) {
         console.error('Error queuing campaign:', error.response?.data || error.toString());
