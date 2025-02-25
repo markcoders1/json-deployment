@@ -1,805 +1,443 @@
-{
-    "data": [
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=ca4774df2633e2b03c0171ff9b0c7eab011d03f5&content=prnews&format=html",
-            "meta": {
-                "author": "Globe Newswire",
-                "channels": [
-                    "Earnings",
-                    "Press Releases"
-                ],
-                "id": 38812703,
-                "image": "",
-                "published": 1715686200,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": "Omaha May 14 2024 GLOBE NEWSWIRE FitLife Brands Inc. FitLife or the Company NASDAQ:FTLF a provider of innovative and proprietary nutritional supplements and wellness products today announced financial",
-                "title": "FitLife Brands Announces First Quarter 2024 Results",
-                "updated": "Tue, 14 May 2024 07:30:01 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=0a44a8fa24e967849f8833e46c88076481cba861&content=prnews&format=html",
-            "meta": {
-                "author": "Globe Newswire",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 38696799,
-                "image": "",
-                "published": 1715167800,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": "OMAHA NE May 08 2024 GLOBE NEWSWIRE FitLife Brands Inc. FitLife or the Company NASDAQ:FTLF a provider of innovative and proprietary nutritional supplements and wellness products today announced that",
-                "title": "FitLife Brands Announces First Quarter Earnings Call and its Participation at Sidoti Virtual Investor Conference and Provides Operational Update",
-                "updated": "Wed, 08 May 2024 07:30:01 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=e46e7de990eeadb19123971f29a00311f4ffc7ec&content=prnews&format=html",
-            "meta": {
-                "author": "Globe Newswire",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 37740079,
-                "image": "",
-                "published": 1710502200,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": "OMAHA NE March 15 2024 GLOBE NEWSWIRE FitLife Brands Inc. FitLife or the Company NASDAQ:FTLF a provider of innovative and proprietary nutritional supplements and wellness products today announced",
-                "title": "FitLife Brands Announces its Participation at the 36th Annual Roth Conference and Provides Operational Update",
-                "updated": "Fri, 15 Mar 2024 07:30:00 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=e9dc03df202985a0c1a5618a3e0b5f065d82826d&content=prnews&format=html",
-            "meta": {
-                "author": "Globe Newswire",
-                "channels": [
-                    "News",
-                    "Management",
-                    "Press Releases"
-                ],
-                "id": 37167883,
-                "image": "",
-                "published": 1708031100,
-                "stocks": [
-                    "FTLF",
-                    "LFVN",
-                    "OPXS"
-                ],
-                "tags": [],
-                "teaser": "SALT LAKE CITY Feb. 15 2024 GLOBE NEWSWIRE LifeVantage Corporation NASDAQ:LFVN a leading health and wellness company with products designed to activate optimal health processes at the cellular level today",
-                "title": "LifeVantage Appoints Dayton Judd to the Board of Directors",
-                "updated": "Thu, 15 Feb 2024 17:05:01 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=22764d8305ebe81fbc0c47cff19dc04e69daa9a4&content=prnews&format=html",
-            "meta": {
-                "author": "Globe Newswire",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 35745708,
-                "image": "",
-                "published": 1699878600,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": "Omaha NE Nov. 13 2023 GLOBE NEWSWIRE November 13 2023 – FitLife Brands Inc. FitLife the Company or we NASDAQ:FTLF a provider of innovative and proprietary nutritional supplements and wellness",
-                "title": "FitLife Brands Announces Third Quarter 2023 Results",
-                "updated": "Mon, 13 Nov 2023 08:30:01 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=2adc9c82c6be9e407443a7ae848bada4bba0009e&content=prnews&format=html",
-            "meta": {
-                "author": "Business Wire",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 35552795,
-                "image": "",
-                "published": 1698876000,
-                "stocks": [
-                    "DSAQ",
-                    "EGY",
-                    "FTLF",
-                    "LFVN",
-                    "RLJE",
-                    "SPRT"
-                ],
-                "tags": [],
-                "teaser": "Highlights Radoff Sudbury Group Nominees Will Bring Differentiated Experience and Fresh Perspectives to the Board Notes Leading Independent Proxy Advisory Firms ISS and Glass Lewis Concluded that Boardroom Change is",
-                "title": "The Radoff Sudbury Group Reiterates the Need to Elect Directors with Governance Turnaround and Wellness Industry Experience to LifeVantage's Board of Directors",
-                "updated": "Wed, 01 Nov 2023 18:00:01 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=f6b7fff2b66d0837026fc500b2185c871a9798bb&content=prnews&format=html",
-            "meta": {
-                "author": "Business Wire",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 35340414,
-                "image": "",
-                "published": 1697749200,
-                "stocks": [
-                    "EGY",
-                    "FTLF",
-                    "LFVN"
-                ],
-                "tags": [],
-                "teaser": "Exposes the Misrepresentations and Distortions Included in LifeVantage's Recent Presentation Believes Recent Misleading Statements from Independent Directors Underscore Chairman Garry Mauro's Outsized Influence Over",
-                "title": "The Radoff Sudbury Group Sets the Record Straight and Highlights Key Facts that Reinforce the Need for Targeted Boardroom Change at LifeVantage Corporation",
-                "updated": "Thu, 19 Oct 2023 17:00:02 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=eb31418b0a5b23d17cf1ab05f86a0e5339bd9f75&content=prnews&format=html",
-            "meta": {
-                "author": "Globe Newswire",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 35237521,
-                "image": "",
-                "published": 1697194800,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": "Omaha NE Oct. 13 2023 GLOBE NEWSWIRE FitLife Brands Inc. FitLife or the Company NASDAQ:FTLF a provider of innovative and proprietary nutritional supplements and wellness products today announced that",
-                "title": "FitLife Brands Closes Acquisition of Substantially All of the Assets of MusclePharm Corporation",
-                "updated": "Fri, 13 Oct 2023 07:00:01 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=b74d9cbdc2770cdd66476368a715a804330981b8&content=prnews&format=html",
-            "meta": {
-                "author": "Globe Newswire",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 34574142,
-                "image": "",
-                "published": 1694689200,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": "OMAHA NE Sept. 14 2023 GLOBE NEWSWIRE FitLife Brands Inc. FitLife or the Company OTC:FTLF NASDAQ:FTLF a provider of innovative and proprietary nutritional supplements and wellness products today",
-                "title": "FitLife Brands Announces Approval to List its Common Stock on the Nasdaq Capital Market",
-                "updated": "Thu, 14 Sep 2023 07:00:01 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=698dc9a4583ab0d80b90d2aa81aca256e68d4a2a&content=prnews&format=html",
-            "meta": {
-                "author": "Globe Newswire",
-                "channels": [
-                    "Earnings",
-                    "Press Releases"
-                ],
-                "id": 33825816,
-                "image": "",
-                "published": 1692010800,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": "Omaha Aug. 14 2023 GLOBE NEWSWIRE FitLife Brands Inc. FitLife or the Company OTC:FTLF a provider of innovative and proprietary nutritional supplements and wellness products today announced financial",
-                "title": "FitLife Brands Announces Second Quarter 2023 Results",
-                "updated": "Mon, 14 Aug 2023 07:00:01 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=32824780960d77d4e92fddc2863209d280d7100a&content=prnews&format=html",
-            "meta": {
-                "author": "Globe Newswire",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 32918971,
-                "image": "",
-                "published": 1687258800,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": "Omaha NE June 20 2023 FitLife Brands Inc. a provider of innovative and proprietary nutritional supplements and wellness products today announced that it",
-                "title": "FitLife Brands Announces Application for Listing of its Common Stock on the Nasdaq Capital Market",
-                "updated": "Tue, 20 Jun 2023 07:00:02 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=5b4f6a39ce2ae635e8ffac5d504207ed6fab80e4&content=prnews&format=html",
-            "meta": {
-                "author": "Globe Newswire",
-                "channels": [
-                    "Earnings",
-                    "Press Releases"
-                ],
-                "id": 32410743,
-                "image": "",
-                "published": 1684187737,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": "OMAHA NE May 15 2023 GLOBE NEWSWIRE FitLife Brands Inc. FitLife or the Company OTC:FTLF a provider of innovative and proprietary nutritional supplements and wellness products today announced",
-                "title": "FitLife Brands Announces First Quarter 2023 Results",
-                "updated": "Mon, 15 May 2023 17:55:38 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=7f73c2921ba3d6b74cd45d9a23e879e3d2121a8e&content=prnews&format=html",
-            "meta": {
-                "author": "Globe Newswire",
-                "channels": [
-                    "Earnings",
-                    "Press Releases"
-                ],
-                "id": 31507557,
-                "image": "",
-                "published": 1679914800,
-                "stocks": [
-                    "FTLF",
-                    "MIMNF",
-                    "TSXV:MIMI"
-                ],
-                "tags": [],
-                "teaser": "Omaha March 27 2023 GLOBE NEWSWIRE FitLife Brands Inc. FitLife or the Company OTC:FTLF a provider of innovative and proprietary nutritional supplements and wellness products today announced",
-                "title": "FitLife Brands Announces Fourth Quarter and Full Year 2022 Results",
-                "updated": "Mon, 27 Mar 2023 07:00:06 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=88438ed97b56798a029225e010e078b8888d2b15&content=prnews&format=html",
-            "meta": {
-                "author": "Globe Newswire",
-                "channels": [
-                    "Earnings",
-                    "Press Releases"
-                ],
-                "id": 26423949,
-                "image": "",
-                "published": 1648823400,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": "Omaha April 01 2022 GLOBE NEWSWIRE FitLife Brands Announces Preliminary 2021 Results OMAHA NE – April 1 2022 – FitLife Brands Inc. FitLife or the Company OTCQX:FTLF a provider of innovative and",
-                "title": "FitLife Brands Announces Preliminary 2021 Results",
-                "updated": "Fri, 01 Apr 2022 10:30:00 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=69055f131a0909f625c0534dff9c5b485109783a&content=prnews&format=html",
-            "meta": {
-                "author": "Globe Newswire",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 20608931,
-                "image": "",
-                "published": 1618344900,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": "Omaha NE April 13 2021 FitLife Brands Acquires Nutrology OMAHA NE – April 13 2021 FitLife Brands Inc. a provider of innovative and proprietary",
-                "title": "FitLife Brands Acquires Nutrology",
-                "updated": "Tue, 13 Apr 2021 16:15:01 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=55d647e0e428d5412d62a02f0a5536661d6d4367&content=prnews&format=html",
-            "meta": {
-                "author": "Globe Newswire",
-                "channels": [
-                    "Earnings",
-                    "Press Releases"
-                ],
-                "id": 20367825,
-                "image": "",
-                "published": 1616792400,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": "Omaha NE March 26 2021 FitLife Brands Announces Fourth Quarter and Full Year 2020 Results OMAHA NE – March 26 2021 FitLife Brands Inc. a provider",
-                "title": "FitLife Brands Announces Fourth Quarter and Full Year 2020 Results",
-                "updated": "Fri, 26 Mar 2021 17:00:01 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=7e07acf821ee748fa9335e84b2dbdda62fe55ba1&content=prnews&format=html",
-            "meta": {
-                "author": "Globe Newswire",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 20008447,
-                "image": "",
-                "published": 1614867432,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": "Omaha March 04 2021 FitLife Brands Adopts Rights Plan to Protect its NOL Assets OMAHA NE – March 4 2021 FitLife Brands Inc. a provider of",
-                "title": "FitLife Brands Adopts Rights Plan to Protect its NOL Assests",
-                "updated": "Thu, 04 Mar 2021 10:17:12 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=6dcfad9a0bd1db9111949b8afb616d34ff88a42d&content=prnews&format=html",
-            "meta": {
-                "author": "Globe Newswire",
-                "channels": [
-                    "Earnings",
-                    "Press Releases"
-                ],
-                "id": 18336970,
-                "image": "",
-                "published": 1605187800,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": "Omaha Nov. 12 2020 OMAHA NE – November 12 2020 FitLife Brands Inc. an international provider of innovative and proprietary nutritional supplements",
-                "title": "FitLife Brands Announces Third Quarter 2020 Results",
-                "updated": "Thu, 12 Nov 2020 09:30:00 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=276be655e76fd19e0b933db7b20ea6411e50942c&content=prnews&format=html",
-            "meta": {
-                "author": "Globe Newswire",
-                "channels": [
-                    "Earnings",
-                    "Press Releases"
-                ],
-                "id": 17068712,
-                "image": "",
-                "published": 1597320010,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": "Omaha Aug. 13 2020 OMAHA NE – August 13 2020 FitLife Brands Inc. an international provider of innovative and proprietary nutritional",
-                "title": "FitLife Brands Announces Second Quarter 2020 Results",
-                "updated": "Thu, 13 Aug 2020 08:00:15 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=1772e9be2eb0b5f42e9c8a0febb7208d5f515666&content=prnews&format=html",
-            "meta": {
-                "author": "Globe Newswire",
-                "channels": [
-                    "Earnings",
-                    "Press Releases"
-                ],
-                "id": 16041664,
-                "image": "",
-                "published": 1589544010,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": "OMAHA Neb. May 15 2020 FitLife Brands Inc. an international provider of innovative and proprietary nutritional supplements for health conscious consumers",
-                "title": "FitLife Brands Announces First Quarter 2020 Results",
-                "updated": "Fri, 15 May 2020 08:00:11 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=d062d7fcaf5d330621a5d83937bf3f3e10ac0fa0&content=prnews&format=html",
-            "meta": {
-                "author": "Globe Newswire",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 15738413,
-                "image": "",
-                "published": 1585917010,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": null,
-                "title": "FitLife Brands Provides Preliminary First Quarter Results and Operational Update",
-                "updated": "Fri, 03 Apr 2020 08:30:11 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=819403ab038a525aaf4cc25bd7bbede64b25c735&content=prnews&format=html",
-            "meta": {
-                "author": "Globe Newswire",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 15693316,
-                "image": "",
-                "published": 1585569610,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": null,
-                "title": "FitLife Brands Announces Fourth Quarter and Full Year 2019 Results",
-                "updated": "Mon, 30 Mar 2020 08:00:12 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=b7ff26476620ef11e925e2184cdf9c1a89130891&content=prnews&format=html",
-            "meta": {
-                "author": "Globe Newswire",
-                "channels": [
-                    "Earnings",
-                    "Press Releases"
-                ],
-                "id": 14776237,
-                "image": "",
-                "published": 1573473600,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": null,
-                "title": "FitLife Brands Announces Third Quarter 2019 Results",
-                "updated": "Mon, 11 Nov 2019 08:00:01 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=4904fc6761c9bfb0a314b53f2b08d9939200b196&content=prnews&format=html",
-            "meta": {
-                "author": "Globe Newswire",
-                "channels": [
-                    "Press Releases",
-                    "General"
-                ],
-                "id": 14659089,
-                "image": "",
-                "published": 1571949005,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": null,
-                "title": "iSatori Launches L Carnitine Fat Loss Drink Mix at Walmart",
-                "updated": "Thu, 24 Oct 2019 16:30:20 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=96adc4922d2d0c624daf7b9347a6f0b8601ec077&content=prnews&format=html",
-            "meta": {
-                "author": "Globe Newswire",
-                "channels": [
-                    "Earnings",
-                    "Press Releases"
-                ],
-                "id": 14244133,
-                "image": "",
-                "published": 1565388000,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": null,
-                "title": "FitLife Brands Announces Second Quarter 2019 Results",
-                "updated": "Fri, 09 Aug 2019 18:00:23 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=55fedc520cb96e23bddd564793caf4e1923b8bf6&content=prnews&format=html",
-            "meta": {
-                "author": "Business Wire",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 13752542,
-                "image": "",
-                "published": 1557957900,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": null,
-                "title": "FitLife Brands Announces First Quarter 2019 Results",
-                "updated": "Wed, 15 May 2019 18:05:00 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=b8a3cb175d6490010bfafaa5a8654ffc88b61ee0&content=prnews&format=html",
-            "meta": {
-                "author": "Business Wire",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 13411496,
-                "image": "",
-                "published": 1553285520,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": null,
-                "title": "FitLife Brands Announces 2018 Results",
-                "updated": "Fri, 22 Mar 2019 16:12:00 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=000c5d9373c3a244fa13586620db63fa6fe82d8e&content=prnews&format=html",
-            "meta": {
-                "author": "Business Wire",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 12706504,
-                "image": "",
-                "published": 1542285000,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": null,
-                "title": "FitLife Brands Announces Third Quarter 2018 Results",
-                "updated": "Thu, 15 Nov 2018 08:30:04 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=8585d3b2214239ca680be6173c52aa3dff6fb061&content=prnews&format=html",
-            "meta": {
-                "author": "Business Wire",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 12198217,
-                "image": "",
-                "published": 1534246200,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": null,
-                "title": "FitLife Brands Announces Second Quarter 2018 Results",
-                "updated": "Tue, 14 Aug 2018 07:30:02 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=c9b5af4b06b1fef7081aa1df88a14fa4990333a8&content=prnews&format=html",
-            "meta": {
-                "author": "Benzinga",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 11724101,
-                "image": "",
-                "published": 1526470200,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": null,
-                "title": "FitLife Brands Announces First Quarter 2018 Results",
-                "updated": "Wed, 16 May 2018 07:30:02 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=a65cefcff3a36c2c3b68a1f3ee4c854d299c99f6&content=prnews&format=html",
-            "meta": {
-                "author": "Benzinga",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 10788875,
-                "image": "",
-                "published": 1510749000,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": null,
-                "title": "FitLife Brands Announces Fiscal 2017 Third Quarter Nine Months Results",
-                "updated": "Wed, 15 Nov 2017 08:30:01 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=26f157cb6474d9554fb6d1fbffe3712616f2b1c2&content=prnews&format=html",
-            "meta": {
-                "author": "Benzinga",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 9959478,
-                "image": "",
-                "published": 1503399600,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": null,
-                "title": "FitLife Brands Announces Fiscal Second Quarter 2017 Results",
-                "updated": "Tue, 22 Aug 2017 07:00:01 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=29a8b6f42c9e6ce482ed9289d20338127e38c8f4&content=prnews&format=html",
-            "meta": {
-                "author": "Benzinga",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 9612326,
-                "image": "",
-                "published": 1497528000,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": null,
-                "title": "FitLife Brands to Showcase Products at the 2017 Europa Games in Dallas",
-                "updated": "Thu, 15 Jun 2017 08:00:03 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=e6f041329a7dd7b967ac1b98767c6388433025b8&content=prnews&format=html",
-            "meta": {
-                "author": "Benzinga",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 9504847,
-                "image": "",
-                "published": 1495544280,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": null,
-                "title": "FitLife Brands Announces Fiscal First Quarter 2017 Results",
-                "updated": "Tue, 23 May 2017 08:58:00 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=fe03ac19ea9298537a39fc26ec962a69495f73ac&content=prnews&format=html",
-            "meta": {
-                "author": "Benzinga",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 9310307,
-                "image": "",
-                "published": 1492518600,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": null,
-                "title": "FitLife Brands Announces Fourth Quarter and Full Year 2016 Results",
-                "updated": "Tue, 18 Apr 2017 08:30:01 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=ac7a5215fc11f9ea77d29ad52e35f76d72619bfc&content=prnews&format=html",
-            "meta": {
-                "author": "Benzinga",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 9241436,
-                "image": "",
-                "published": 1490963400,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": null,
-                "title": "FitLife to File Form 12b 25 Notification of Late Filing of its Annual Report on Form 10 K",
-                "updated": "Fri, 31 Mar 2017 08:30:01 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=85824e53c7a029f1d08094d60ca5f6bb4394199b&content=prnews&format=html",
-            "meta": {
-                "author": "Benzinga",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 9100874,
-                "image": "",
-                "published": 1488217800,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": null,
-                "title": "FitLife Brands to Showcase Products at the 2017 Arnold Sports Festival",
-                "updated": "Mon, 27 Feb 2017 13:50:00 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=9f5b917834059b110012d3590ad257d50ee33592&content=prnews&format=html",
-            "meta": {
-                "author": "Benzinga",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 8696640,
-                "image": "",
-                "published": 1479159012,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": null,
-                "title": "FitLife Brands Announces Fiscal 2016 Third Quarter Nine Months Results",
-                "updated": "Mon, 14 Nov 2016 17:30:12 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=f37bbf934b7cd83a7b7573dfa214dfbf50602902&content=prnews&format=html",
-            "meta": {
-                "author": "Benzinga",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 8690346,
-                "image": "",
-                "published": 1479128793,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": null,
-                "title": "FitLife Brands to Present at the Southwest IDEAS Investor Conference on November 17th in Dallas",
-                "updated": "Mon, 14 Nov 2016 09:06:33 -0400"
-            }
-        },
-        {
-            "html": "https://api.kscope.io/v2/documents/viewer?key=8bc43de0-321b-4ca0-b39c-52b60b554e89&docid=4a6232405caa1e5af02fc76282c8ab7347eee301&content=prnews&format=html",
-            "meta": {
-                "author": "Benzinga",
-                "channels": [
-                    "Press Releases"
-                ],
-                "id": 8665103,
-                "image": "",
-                "published": 1478608245,
-                "stocks": [
-                    "FTLF"
-                ],
-                "tags": [],
-                "teaser": null,
-                "title": "FitLife Brands Announces Preliminary Third Quarter and Nine Month 2016 Results",
-                "updated": "Tue, 08 Nov 2016 08:30:45 -0400"
-            }
-        }
-    ],
-    "end": 50,
-    "groups": {
-        "year": [
-            2016,
-            2017,
-            2018,
-            2019,
-            2020,
-            2021,
-            2022,
-            2023,
-            2024
-        ]
+[
+    {
+        "_id": "67a3ee62346e85f4bd753a68",
+        "press_id": "3021640",
+        "html": "https://www.globenewswire.com/news-release/2025/02/05/3021640/0/en/FitLife-Brands-Announces-2-for-1-Forward-Stock-Split.html",
+        "author": "GlobeNewswire Inc.",
+        "teaser": "<p>Omaha, NE, Feb.  05, 2025  (GLOBE NEWSWIRE) -- FitLife Brands, Inc. (“FitLife” or the “Company”) (Nasdaq: FTLF), a provider of innovative and proprietary nutritional supplements and wellness products, today announced that it will be implementing a 2-for-1 forward stock split. The Company’s common stock will begin trading on a split-adjusted basis on Friday, February 7, 2025. In conjunction with the stock split, the CUSIP number for Company’s common stock will change to 33817P405.</p>",
+        "title": "FitLife Brands Announces 2-for-1 Forward Stock Split",
+        "updated": "Wed, 05 Feb 2025 22:00 GMT",
+        "created_at": "2025-02-05T23:04:02.207Z",
+        "__v": 0
     },
-    "start": 0,
-    "total": 40
-}
+    {
+        "_id": "678054f7b9e37ebead7f27e2",
+        "press_id": "2982734",
+        "html": "https://www.globenewswire.com/news-release/2024/11/18/2982734/0/en/FitLife-Brands-Responds-to-Investor-Questions-Regarding-Registration-Statement.html",
+        "author": "GlobeNewswire Inc.",
+        "teaser": "<p>OMAHA, NE, Nov.  18, 2024  (GLOBE NEWSWIRE) -- FitLife Brands, Inc. (“FitLife,” or the “Company”) (Nasdaq: FTLF), a provider of innovative and proprietary nutritional supplements and wellness products, today responds to questions from investors regarding its filing of a registration statement with the SEC.</p>",
+        "title": "FitLife Brands Responds to Investor Questions Regarding Registration Statement",
+        "updated": "Mon, 18 Nov 2024 13:00 GMT",
+        "created_at": "2025-01-09T23:00:07.190Z",
+        "__v": 0
+    },
+    {
+        "_id": "676a045ecc23059f3bcc5d31",
+        "press_id": "2981071",
+        "html": "https://www.globenewswire.com/news-release/2024/11/14/2981071/0/en/FitLife-Brands-Announces-Third-Quarter-2024-Results.html",
+        "author": "GlobeNewswire Inc.",
+        "teaser": "<p align=\"left\">Omaha, Nov.  14, 2024  (GLOBE NEWSWIRE) -- FitLife Brands, Inc. (“<em>FitLife</em>” or the “<em>Company</em>”) (NASDAQ: FTLF), a provider of innovative and proprietary nutritional supplements and wellness products, today announced financial results for the third quarter ended September 30, 2024.</p>",
+        "title": "FitLife Brands Announces Third Quarter 2024 Results",
+        "updated": "Thu, 14 Nov 2024 12:30 GMT",
+        "created_at": "2024-12-24T00:46:22.155Z",
+        "__v": 0
+    },
+    {
+        "_id": "6769eb9c04c1486cb629c3da",
+        "press_id": "2975865",
+        "html": "https://www.globenewswire.com/news-release/2024/11/06/2975865/0/en/FitLife-Brands-Announces-Third-Quarter-Earnings-Call.html",
+        "author": "GlobeNewswire Inc.",
+        "teaser": "<p>OMAHA, NE, Nov.  06, 2024  (GLOBE NEWSWIRE) -- FitLife Brands, Inc. (“FitLife,” or the “Company”) (Nasdaq: FTLF), a provider of innovative and proprietary nutritional supplements and wellness products, today announced that it plans to report its financial performance for the third quarter of fiscal 2024 on Thursday, November 14, 2024.</p>",
+        "title": "FitLife Brands Announces Third Quarter Earnings Call",
+        "updated": "Wed, 06 Nov 2024 16:00 GMT",
+        "created_at": "2024-12-23T23:00:44.334Z",
+        "__v": 0
+    },
+    {
+        "_id": "673e074b34b99ebf8961531a",
+        "press_id": "2929962",
+        "html": "https://www.globenewswire.com/news-release/2024/08/14/2929962/0/en/FitLife-Brands-Announces-Second-Quarter-2024-Results.html",
+        "author": "GlobeNewswire Inc.",
+        "teaser": "<p align=\"left\">Omaha, Aug.  14, 2024  (GLOBE NEWSWIRE) -- FitLife Brands, Inc. (“<em>FitLife</em>” or the “<em>Company</em>”) (NASDAQ: FTLF), a provider of innovative and proprietary nutritional supplements and wellness products, today announced financial results for the second quarter ended June 30, 2024.<br></p>",
+        "title": "FitLife Brands Announces Second Quarter 2024 Results",
+        "updated": "Wed, 14 Aug 2024 11:30 GMT",
+        "created_at": "2024-11-20T15:59:07.626Z",
+        "__v": 0
+    },
+    {
+        "_id": "673e074c34b99ebf8961531d",
+        "press_id": "2924665",
+        "html": "https://www.globenewswire.com/news-release/2024/08/05/2924665/0/en/FitLife-Brands-Announces-Second-Quarter-Earnings-Call.html",
+        "author": "GlobeNewswire Inc.",
+        "teaser": "<p align=\"left\">Omaha. NE, Aug.  05, 2024  (GLOBE NEWSWIRE) -- FitLife Brands, Inc. (“FitLife,” or the “Company”) (Nasdaq: FTLF), a provider of innovative and proprietary nutritional supplements and wellness products, today announced that it plans to report its financial performance for the second quarter of fiscal 2024 on Wednesday, August 14, 2024.</p>",
+        "title": "FitLife Brands Announces Second Quarter Earnings Call",
+        "updated": "Mon, 05 Aug 2024 20:30 GMT",
+        "created_at": "2024-11-20T15:59:08.134Z",
+        "__v": 0
+    },
+    {
+        "_id": "673e074c34b99ebf89615320",
+        "press_id": "2908995",
+        "html": "https://www.globenewswire.com/news-release/2024/07/05/2908995/0/en/FitLife-Brands-Director-Lew-Jaffe-to-Retire-from-the-Board-and-Not-Stand-for-Re-election-at-the-2024-Annual-Meeting.html",
+        "author": "GlobeNewswire Inc.",
+        "teaser": "<p>OMAHA, NE, July  05, 2024  (GLOBE NEWSWIRE) -- FitLife Brands, Inc. (“<em>FitLife</em>” or the “<em>Company</em>”) (NASDAQ: FTLF), a provider of innovative and proprietary nutritional supplements and wellness products, announced today that Lew Jaffe, who has served as a director of FitLife and its predecessor entities since 2010, will retire from the Board and not stand for re-election at the Company’s 2024 annual meeting of stockholders.  The Board plans to nominate a new director in its proxy statement, which is anticipated to be filed with the SEC on July 5, 2024.</p>",
+        "title": "FitLife Brands Director Lew Jaffe to Retire from the Board and Not Stand for Re-election at the 2024 Annual Meeting",
+        "updated": "Fri, 05 Jul 2024 11:00 GMT",
+        "created_at": "2024-11-20T15:59:08.763Z",
+        "__v": 0
+    },
+    {
+        "_id": "673e074d34b99ebf89615323",
+        "press_id": "2881272",
+        "html": "https://www.globenewswire.com/news-release/2024/05/14/2881272/0/en/FitLife-Brands-Announces-First-Quarter-2024-Results.html",
+        "author": "GlobeNewswire Inc.",
+        "teaser": "<p align=\"left\">Omaha, May  14, 2024  (GLOBE NEWSWIRE) -- FitLife Brands, Inc. (“<em>FitLife</em>” or the “<em>Company</em>”) (NASDAQ: FTLF), a provider of innovative and proprietary nutritional supplements and wellness products, today announced financial results for the first quarter ended March 31, 2024.</p>",
+        "title": "FitLife Brands Announces First Quarter 2024 Results",
+        "updated": "Tue, 14 May 2024 11:30 GMT",
+        "created_at": "2024-11-20T15:59:09.248Z",
+        "__v": 0
+    },
+    {
+        "_id": "673e074d34b99ebf89615326",
+        "press_id": "2877719",
+        "html": "https://www.globenewswire.com/news-release/2024/05/08/2877719/0/en/FitLife-Brands-Announces-First-Quarter-Earnings-Call-and-its-Participation-at-Sidoti-Virtual-Investor-Conference-and-Provides-Operational-Update.html",
+        "author": "GlobeNewswire Inc.",
+        "teaser": "<p>OMAHA, NE, May  08, 2024  (GLOBE NEWSWIRE) -- FitLife Brands, Inc. (“FitLife,” or the “Company”) (Nasdaq: FTLF), a provider of innovative and proprietary nutritional supplements and wellness products, today announced that it will participate in the Sidoti Virtual Investor Conference on Wednesday and Thursday, May 8-9, 2024. </p>",
+        "title": "FitLife Brands Announces First Quarter Earnings Call and its Participation at  Sidoti Virtual Investor Conference and Provides Operational Update",
+        "updated": "Wed, 08 May 2024 11:30 GMT",
+        "created_at": "2024-11-20T15:59:09.772Z",
+        "__v": 0
+    },
+    {
+        "_id": "673e074e34b99ebf89615329",
+        "press_id": "2854841",
+        "html": "https://www.globenewswire.com/news-release/2024/03/29/2854841/0/en/FitLife-Brands-Announces-Fourth-Quarter-and-Full-Year-2023-Results-and-Investor-Conference-Call.html",
+        "author": "GlobeNewswire Inc.",
+        "teaser": "<p>OMAHA, NE, March  29, 2024  (GLOBE NEWSWIRE) -- FitLife Brands, Inc. (“<em>FitLife,</em>” the “<em>Company</em>,” or “<em>We</em>”) (Nasdaq: FTLF), a provider of innovative and proprietary nutritional supplements and wellness products, today announced financial results for the year ended December 31, 2023.  The Company’s improved financial performance during the quarter and for the full year was driven primarily by the acquisition of Mimi’s Rock Corp. (“<em>MRC</em>”), which closed on February 28, 2023.</p>",
+        "title": "FitLife Brands Announces Fourth Quarter and Full-Year 2023 Results and Investor Conference Call",
+        "updated": "Fri, 29 Mar 2024 20:30 GMT",
+        "created_at": "2024-11-20T15:59:10.384Z",
+        "__v": 0
+    },
+    {
+        "_id": "673e074e34b99ebf8961532c",
+        "press_id": "2846974",
+        "html": "https://www.globenewswire.com/news-release/2024/03/15/2846974/0/en/FitLife-Brands-Announces-its-Participation-at-the-36th-Annual-Roth-Conference-and-Provides-Operational-Update.html",
+        "author": "GlobeNewswire Inc.",
+        "teaser": "<p align=\"left\">OMAHA, NE, March  15, 2024  (GLOBE NEWSWIRE) -- FitLife Brands, Inc. (“FitLife,” or the “Company”) (Nasdaq: FTLF), a provider of innovative and proprietary nutritional supplements and wellness products, today announced that it will participate in the 36<sup>th</sup> Annual Roth Conference on Monday, March 18, 2024.  Investors who are interested in meeting with FitLife management should submit their requests through their Roth MKM representative.</p>",
+        "title": "FitLife Brands Announces its Participation at the 36th Annual Roth Conference and Provides Operational Update",
+        "updated": "Fri, 15 Mar 2024 11:30 GMT",
+        "created_at": "2024-11-20T15:59:10.797Z",
+        "__v": 0
+    },
+    {
+        "_id": "673e074f34b99ebf8961532f",
+        "press_id": "2778945",
+        "html": "https://www.globenewswire.com/news-release/2023/11/13/2778945/0/en/FitLife-Brands-Announces-Third-Quarter-2023-Results.html",
+        "author": "GlobeNewswire Inc.",
+        "teaser": "<p>Omaha, NE, Nov.  13, 2023  (GLOBE NEWSWIRE) -- November 13, 2023 – FitLife Brands, Inc. (“FitLife,” the “Company,” or “we”) (Nasdaq: FTLF), a provider of innovative and proprietary nutritional supplements and wellness products, today announced financial results for the third quarter ended September 30, 2023.</p>",
+        "title": "FitLife Brands Announces Third Quarter 2023 Results",
+        "updated": "Mon, 13 Nov 2023 12:30 GMT",
+        "created_at": "2024-11-20T15:59:11.336Z",
+        "__v": 0
+    },
+    {
+        "_id": "673e074f34b99ebf89615332",
+        "press_id": "2759871",
+        "html": "https://www.globenewswire.com/news-release/2023/10/13/2759871/0/en/FitLife-Brands-Closes-Acquisition-of-Substantially-All-of-the-Assets-of-MusclePharm-Corporation.html",
+        "author": "GlobeNewswire Inc.",
+        "teaser": "<p>Omaha, NE, Oct.  13, 2023  (GLOBE NEWSWIRE) -- FitLife Brands, Inc. (“FitLife” or the “Company”) (Nasdaq: FTLF), a provider of innovative and proprietary nutritional supplements and wellness products, today announced that on October 10, 2023, it successfully closed the acquisition of substantially all of the assets of MusclePharm Corporation (“MusclePharm”) as previously approved by the US Bankruptcy Court for the District of Nevada.  </p>",
+        "title": "FitLife Brands Closes Acquisition of Substantially All  of the Assets of MusclePharm Corporation ",
+        "updated": "Fri, 13 Oct 2023 11:00 GMT",
+        "created_at": "2024-11-20T15:59:11.735Z",
+        "__v": 0
+    },
+    {
+        "_id": "673e075034b99ebf89615335",
+        "press_id": "2750776",
+        "html": "https://www.globenewswire.com/news-release/2023/09/27/2750776/0/en/FitLife-Brands-to-Acquire-Substantially-All-of-the-Assets-of-MusclePharm-Corporation.html",
+        "author": "GlobeNewswire Inc.",
+        "teaser": "<p>Omaha, NE, Sept.  27, 2023  (GLOBE NEWSWIRE) -- FitLife Brands, Inc. (“FitLife” or the “Company”) (Nasdaq: FTLF), a provider of innovative and proprietary nutritional supplements and wellness products, today announced that the US Bankruptcy Court for the District of Nevada has approved FitLife’s acquisition of substantially all of the assets of MusclePharm Corporation under Section 363 of the US Bankruptcy Code.</p>",
+        "title": "FitLife Brands to Acquire Substantially All of  the Assets of MusclePharm Corporation ",
+        "updated": "Wed, 27 Sep 2023 20:45 GMT",
+        "created_at": "2024-11-20T15:59:12.332Z",
+        "__v": 0
+    },
+    {
+        "_id": "673e075034b99ebf89615338",
+        "press_id": "2743125",
+        "html": "https://www.globenewswire.com/news-release/2023/09/14/2743125/0/en/FitLife-Brands-Announces-Approval-to-List-its-Common-Stock-on-the-Nasdaq-Capital-Market.html",
+        "author": "GlobeNewswire Inc.",
+        "teaser": "<p align=\"justify\">OMAHA, NE, Sept.  14, 2023  (GLOBE NEWSWIRE) -- FitLife Brands, Inc. (“FitLife” or the “Company”) (OTC Pink: FTLF/Nasdaq: FTLF), a provider of innovative and proprietary nutritional supplements and wellness products, today announced that the Company has received approval to list its common stock on the Nasdaq Capital Market (“Nasdaq”).</p>",
+        "title": "FitLife Brands Announces Approval to List its  Common Stock on the Nasdaq Capital Market",
+        "updated": "Thu, 14 Sep 2023 11:00 GMT",
+        "created_at": "2024-11-20T15:59:12.948Z",
+        "__v": 0
+    },
+    {
+        "_id": "673e075134b99ebf8961533b",
+        "press_id": "2724232",
+        "html": "https://www.globenewswire.com/news-release/2023/08/14/2724232/0/en/FitLife-Brands-Announces-Second-Quarter-2023-Results.html",
+        "author": "GlobeNewswire Inc.",
+        "teaser": "<p>Omaha, Aug.  14, 2023  (GLOBE NEWSWIRE) -- FitLife Brands, Inc. (“FitLife” or the “Company”) (OTC Pink: FTLF), a provider of innovative and proprietary nutritional supplements and wellness products, today announced financial results for the second quarter ended June 30, 2023, the first full quarter following the acquisition of Mimi’s Rock Corp (“MRC”) on February 28, 2023.</p>",
+        "title": "FitLife Brands Announces Second Quarter 2023 Results",
+        "updated": "Mon, 14 Aug 2023 11:00 GMT",
+        "created_at": "2024-11-20T15:59:13.444Z",
+        "__v": 0
+    },
+    {
+        "_id": "673e075134b99ebf8961533e",
+        "press_id": "2690914",
+        "html": "https://www.globenewswire.com/news-release/2023/06/20/2690914/0/en/FitLife-Brands-Announces-Application-for-Listing-of-its-Common-Stock-on-the-Nasdaq-Capital-Market.html",
+        "author": "GlobeNewswire Inc.",
+        "teaser": "<p>Omaha, NE, June  20, 2023  (GLOBE NEWSWIRE) -- FitLife Brands, Inc. (“FitLife” or the “Company”) (OTC Pink: FTLF), a provider of innovative and proprietary nutritional supplements and wellness products, today announced that it has submitted an application for the listing of its common stock on the Nasdaq Capital Market.  </p>",
+        "title": "FitLife Brands Announces Application for Listing of its  Common Stock on the Nasdaq Capital Market",
+        "updated": "Tue, 20 Jun 2023 11:00 GMT",
+        "created_at": "2024-11-20T15:59:13.864Z",
+        "__v": 0
+    },
+    {
+        "_id": "673e075234b99ebf89615341",
+        "press_id": "2669438",
+        "html": "https://www.globenewswire.com/news-release/2023/05/15/2669438/0/en/FitLife-Brands-Announces-First-Quarter-2023-Results.html",
+        "author": "GlobeNewswire Inc.",
+        "teaser": "<p align=\"justify\">OMAHA, NE, May  15, 2023  (GLOBE NEWSWIRE) -- FitLife Brands, Inc. (“FitLife” or the “Company”) (OTC Pink: FTLF), a provider of innovative and proprietary nutritional supplements and wellness products, today announced financial results for the first quarter ended March 31, 2023.</p>",
+        "title": "FitLife Brands Announces First Quarter 2023 Results",
+        "updated": "Mon, 15 May 2023 21:55 GMT",
+        "created_at": "2024-11-20T15:59:14.343Z",
+        "__v": 0
+    },
+    {
+        "_id": "673e075234b99ebf89615344",
+        "press_id": "2634623",
+        "html": "https://www.globenewswire.com/news-release/2023/03/27/2634623/0/en/FitLife-Brands-Announces-Fourth-Quarter-and-Full-Year-2022-Results.html",
+        "author": "GlobeNewswire Inc.",
+        "teaser": "<p align=\"center\">Omaha, March  27, 2023  (GLOBE NEWSWIRE) --   </p> <p align=\"left\">FitLife Brands, Inc. (“FitLife” or the “Company”) (OTC Pink: FTLF), a provider of innovative and proprietary nutritional supplements and wellness products, today announced financial results for the year ended December 31, 2022.<br></p>",
+        "title": "FitLife Brands Announces Fourth Quarter and Full Year 2022 Results",
+        "updated": "Mon, 27 Mar 2023 11:00 GMT",
+        "created_at": "2024-11-20T15:59:14.892Z",
+        "__v": 0
+    },
+    {
+        "_id": "673e075334b99ebf89615347",
+        "press_id": "2617792",
+        "html": "https://www.globenewswire.com/news-release/2023/03/01/2617792/0/en/FitLife-Brands-Completes-Acquisition-of-Mimi-s-Rock-Corp.html",
+        "author": "GlobeNewswire Inc.",
+        "teaser": "Transformative acquisition will double the size of FitLife  with minimal leverage and no dilution to shareholders <pre>Transformative acquisition will double the size of FitLife  with minimal leverage and no dilution to shareholders</pre>",
+        "title": "FitLife Brands Completes Acquisition of Mimi’s Rock Corp.",
+        "updated": "Wed, 01 Mar 2023 02:17 GMT",
+        "created_at": "2024-11-20T15:59:15.402Z",
+        "__v": 0
+    },
+    {
+        "_id": "6765f7c278bff794c5ba5a4a",
+        "press_id": "2610302",
+        "html": "https://www.globenewswire.com/news-release/2023/02/16/2610302/0/en/Mimi-s-Rock-Corp-Shareholders-Approve-Acquisition-by-FitLife-Brands.html",
+        "author": "GlobeNewswire Inc.",
+        "teaser": "Transformative acquisition will double the size of FitLife with minimal leverage and no dilution to shareholders <pre>Transformative acquisition will double the size of FitLife with minimal leverage and no dilution to shareholders</pre>",
+        "title": "Mimi’s Rock Corp. Shareholders Approve Acquisition by FitLife Brands",
+        "updated": "Thu, 16 Feb 2023 22:09 GMT",
+        "created_at": "2024-12-20T23:03:30.680Z",
+        "__v": 0
+    },
+    {
+        "_id": "67bd389056764d5fabfb53cc",
+        "press_id": "2567300",
+        "html": "https://www.globenewswire.com/news-release/2022/12/05/2567300/0/en/FitLife-Brands-to-Acquire-Mimi-s-Rock-Corp.html",
+        "teaser": "OMAHA, NE, Dec. 05, 2022 (GLOBE NEWSWIRE) -- FitLife Brands, Inc. (“FitLife” or the “Company”) (OTCPK: FTLF), a provider of innovative and proprietary nutritional supplements for health-conscious consumers, announced that it has entered into definitive documentation to acquire all of the issued and outstanding common shares of Mimi’s Rock Corp. (“Mimi’s Rock” or “MRC”) (TSXV: MIMI, OTCQB: MIMNF), subject to customary closing conditions.",
+        "title": "FitLife Brands to Acquire Mimi’s Rock Corp.",
+        "updated": "Mon, 05 Dec 2022 07:30:00 GMT",
+        "author": "GlobeNewswire Inc.",
+        "created_at": "2025-02-25T18:25:16.885Z"
+    },
+    {
+        "_id": "67bd389056764d5fabfb53cd",
+        "press_id": "2553854",
+        "html": "https://www.globenewswire.com/news-release/2022/11/10/2553854/0/en/FitLife-Brands-Announces-Third-Quarter-2022-Results.html",
+        "teaser": "OMAHA, NE – November 10, 2022 -- FitLife Brands, Inc. (“FitLife” or the “Company”) (OTC: FTLF), an international provider of innovative and proprietary nutritional supplements for health-conscious consumers marketed under the brand names NDS Nutrition, PMD, SirenLabs, Nutrology, CoreActive, Metis Nutrition, iSatori, Energize, and BioGenetic Laboratories, today announced results for the three and nine months ended September 30, 2022.",
+        "title": "FitLife Brands Announces Third Quarter 2022 Results",
+        "updated": "Thu, 10 Nov 2022 16:30:00 GMT",
+        "author": "GlobeNewswire Inc.",
+        "created_at": "2025-02-25T18:25:16.886Z"
+    },
+    {
+        "_id": "67bd389056764d5fabfb53ce",
+        "press_id": "2498636",
+        "html": "https://www.globenewswire.com/news-release/2022/08/15/2498636/0/en/FitLife-Brands-Announces-Preliminary-Second-Quarter-2022-Results-and-Hiring-of-New-CFO.html",
+        "teaser": "OMAHA, NE – August 15, 2022 – FitLife Brands, Inc. (“FitLife” or the “Company”) (OTC PINK: FTLF), a provider of innovative and proprietary nutritional supplements for health-conscious consumers marketed under the brand names NDS Nutrition, PMD, SirenLabs, Nutrology, CoreActive, Metis Nutrition, iSatori, Energize, and BioGenetic Laboratories, today announced preliminary financial results for the three months ended June 30, 2022.",
+        "title": "FitLife Brands Announces Preliminary Second  Quarter 2022 Results and Hiring of New CFO",
+        "updated": "Mon, 15 Aug 2022 17:15:00 GMT",
+        "author": "GlobeNewswire Inc.",
+        "created_at": "2025-02-25T18:25:16.887Z"
+    },
+    {
+        "_id": "67bd389056764d5fabfb53cf",
+        "press_id": "2444379",
+        "html": "https://www.globenewswire.com/news-release/2022/05/16/2444379/0/en/FitLife-Brands-Announces-Preliminary-First-Quarter-2022-Results.html",
+        "teaser": "OMAHA, NE – May 16, 2022 – FitLife Brands, Inc. (“FitLife” or the “Company”) (OTCQX: FTLF), a provider of innovative and proprietary nutritional supplements for health-conscious consumers marketed under the brand names NDS Nutrition, PMD, SirenLabs, Nutrology, CoreActive, Metis Nutrition, iSatori, Energize, and BioGenetic Laboratories, today announced preliminary financial results for the three months ended March 31, 2022.",
+        "title": "FitLife Brands Announces Preliminary First Quarter 2022 Results",
+        "updated": "Mon, 16 May 2022 16:30:00 GMT",
+        "author": "GlobeNewswire Inc.",
+        "created_at": "2025-02-25T18:25:16.887Z"
+    },
+    {
+        "_id": "67bd389056764d5fabfb53d0",
+        "press_id": "2414925",
+        "html": "https://www.globenewswire.com/news-release/2022/04/01/2414925/0/en/FitLife-Brands-Announces-Preliminary-2021-Results.html",
+        "teaser": "OMAHA, NE – April 1, 2022 – FitLife Brands, Inc. (“FitLife” or the “Company”) (OTCQX: FTLF), a provider of innovative and proprietary nutritional supplements for health-conscious consumers marketed under the brand names NDS Nutrition, PMD, SirenLabs, Nutrology, CoreActive, Metis Nutrition, iSatori, Energize, and BioGenetic Laboratories, today announced preliminary financial results for its fiscal year ended December 31, 2021.",
+        "title": "FitLife Brands Announces Preliminary 2021 Results",
+        "updated": "Fri, 01 Apr 2022 10:30:00 GMT",
+        "author": "GlobeNewswire Inc.",
+        "created_at": "2025-02-25T18:25:16.887Z"
+    },
+    {
+        "_id": "67bd389056764d5fabfb53d5",
+        "press_id": "2352074",
+        "html": "https://www.globenewswire.com/news-release/2021/12/14/2352074/0/en/FitLife-Brands-Implements-4-for-1-Forward-Stock-Split.html",
+        "teaser": "OMAHA, NE – December 14, 2021 -- FitLife Brands, Inc. (“FitLife” or the “Company”) (OTCQX: FTLFD), an international provider of innovative and proprietary nutritional supplements for health-conscious consumers marketed under the brand names NDS Nutrition, PMD, SirenLabs, Nutrology, CoreActive, Metis Nutrition, iSatori, Energize, and BioGenetic Laboratories announced that it has implemented a 4-for-1 forward stock split. The Company’s common stock began trading on a split-adjusted basis on Wednesday, December 8, 2021.",
+        "title": "FitLife Brands Implements 4-for-1 Forward Stock Split",
+        "updated": "Tue, 14 Dec 2021 15:00:00 GMT",
+        "author": "GlobeNewswire Inc.",
+        "created_at": "2025-02-25T18:25:16.888Z"
+    },
+    {
+        "_id": "67bd389056764d5fabfb53d6",
+        "press_id": "2333377",
+        "html": "https://www.globenewswire.com/news-release/2021/11/12/2333377/0/en/FitLife-Brands-Announces-Third-Quarter-2021-Results.html",
+        "teaser": "OMAHA, NE – November 12, 2021 -- FitLife Brands, Inc. (“FitLife” or the “Company”) (OTCQX: FTLF), an international provider of innovative and proprietary nutritional supplements for health-conscious consumers marketed under the brand names NDS Nutrition, PMD, SirenLabs, Nutrology, CoreActive, Metis Nutrition, iSatori, Energize, and BioGenetic Laboratories, today announced results for the three and nine months ended September 30, 2021.",
+        "title": "FitLife Brands Announces Third Quarter 2021 Results",
+        "updated": "Fri, 12 Nov 2021 08:00:00 GMT",
+        "author": "GlobeNewswire Inc.",
+        "created_at": "2025-02-25T18:25:16.888Z"
+    },
+    {
+        "_id": "67bd389056764d5fabfb53d7",
+        "press_id": "2281613",
+        "html": "https://www.globenewswire.com/news-release/2021/08/16/2281613/0/en/FitLife-Brands-Announces-Second-Quarter-2021-Results.html",
+        "teaser": "OMAHA, NE – August 16, 2021 -- FitLife Brands, Inc. (“FitLife” or the “Company”) (OTCQX: FTLF), an international provider of innovative and proprietary nutritional supplements for health-conscious consumers marketed under the brand names NDS Nutrition, PMD, SirenLabs, Nutrology, CoreActive, Metis Nutrition, iSatori, Energize, and BioGenetic Laboratories, today announced results for the three and six months ended June 30, 2021.",
+        "title": "FitLife Brands Announces Second Quarter 2021 Results",
+        "updated": "Mon, 16 Aug 2021 17:49:00 GMT",
+        "author": "GlobeNewswire Inc.",
+        "created_at": "2025-02-25T18:25:16.888Z"
+    },
+    {
+        "_id": "67bd389056764d5fabfb53d8",
+        "press_id": "2229884",
+        "html": "https://www.globenewswire.com/news-release/2021/05/14/2229884/0/en/FitLife-Brands-Announces-First-Quarter-2021-Results.html",
+        "teaser": "Omaha, NE, May 14, 2021 (GLOBE NEWSWIRE) -- FitLife Brands, Inc. (“FitLife” or the “Company”) (OTCQX: FTLF), a provider of innovative and proprietary nutritional supplements for health-conscious consumers marketed under the brand names NDS Nutrition, PMD, SirenLabs, Nutrology, CoreActive, Metis Nutrition, iSatori, Energize, and BioGenetic Laboratories, today announced results for the three months ended March 31, 2021.",
+        "title": "FitLife Brands Announces First Quarter 2021 Results",
+        "updated": "Fri, 14 May 2021 08:00:00 GMT",
+        "author": "GlobeNewswire Inc.",
+        "created_at": "2025-02-25T18:25:16.889Z"
+    },
+    {
+        "_id": "67bd389056764d5fabfb53d9",
+        "press_id": "2221243",
+        "html": "https://www.globenewswire.com/news-release/2021/05/03/2221243/0/en/FitLife-Brands-Begins-Trading-on-the-OTCQX-Market.html",
+        "teaser": "OMAHA, NE – May 3, 2021 -- FitLife Brands, Inc. (“FitLife” or the “Company”) (OTCQX: FTLF), a provider of innovative and proprietary nutritional supplements for health-conscious consumers marketed under the brand names NDS Nutrition, PMD, SirenLabs, Nutrology, CoreActive, Metis Nutrition, iSatori, Energize, and BioGenetic Laboratories, today announced that its common stock has been approved for trading on the OTCQX retaining its current symbol, FTLF, effective as of the opening of trading on Monday, May 3, 2021.",
+        "title": "FitLife Brands Begins Trading on the OTCQX Market",
+        "updated": "Mon, 03 May 2021 07:00:00 GMT",
+        "author": "GlobeNewswire Inc.",
+        "created_at": "2025-02-25T18:25:16.889Z"
+    },
+    {
+        "_id": "67bd389056764d5fabfb53da",
+        "press_id": "2209532",
+        "html": "https://www.globenewswire.com/news-release/2021/04/13/2209532/0/en/FitLife-Brands-Acquires-Nutrology.html",
+        "teaser": "OMAHA, NE – April 13, 2021 -- FitLife Brands, Inc. (“FitLife” or the “Company”) (OTC Pink: FTLF), a provider of innovative and proprietary nutritional supplements for health-conscious consumers marketed under the brand names NDS Nutrition, PMD, SirenLabs, CoreActive, Metis Nutrition, iSatori, Energize, and BioGenetic Laboratories, today announced the acquisition of substantially all of the assets of Nutrology.  The all-cash acquisition, which closed on April 7, is expected to be immediately accretive to earnings.",
+        "title": "FitLife Brands Acquires Nutrology",
+        "updated": "Tue, 13 Apr 2021 16:15:00 GMT",
+        "author": "GlobeNewswire Inc.",
+        "created_at": "2025-02-25T18:25:16.889Z"
+    },
+    {
+        "_id": "67bd389056764d5fabfb53db",
+        "press_id": "2200310",
+        "html": "https://www.globenewswire.com/news-release/2021/03/26/2200310/0/en/FitLife-Brands-Announces-Fourth-Quarter-and-Full-Year-2020-Results.html",
+        "teaser": "OMAHA, NE – March 26, 2021 -- FitLife Brands, Inc. (“FitLife” or the “Company”) (OTC Pink: FTLF), a provider of innovative and proprietary nutritional supplements for health-conscious consumers marketed under the brand names NDS Nutrition™, PMD®, SirenLabs®, CoreActive®, Metis Nutrition™, iSatori™, Energize, and BioGenetic Laboratories, today announced results for the three and twelve months ended December 31, 2020.",
+        "title": "FitLife Brands Announces Fourth Quarter and Full Year 2020 Results",
+        "updated": "Fri, 26 Mar 2021 17:00:00 GMT",
+        "author": "GlobeNewswire Inc.",
+        "created_at": "2025-02-25T18:25:16.889Z"
+    },
+    {
+        "_id": "67bd389056764d5fabfb53dc",
+        "press_id": "2187270",
+        "html": "https://www.globenewswire.com/news-release/2021/03/04/2187270/0/en/FitLife-Brands-Adopts-Rights-Plan-to-Protect-its-NOL-Assests.html",
+        "teaser": "OMAHA, NE – March 4, 2021 -- FitLife Brands, Inc. (“FitLife” or the “Company”) (OTC Pink: FTLF), a provider of innovative and proprietary nutritional supplements for health-conscious consumers marketed under the brand names NDS Nutrition™, PMD®, SirenLabs®, CoreActive®, Metis Nutrition™, iSatori™, Energize, and BioGenetic Laboratories, today announced that its Board of Directors adopted a tax benefit preservation plan (“Rights Plan”) designed to protect the availability of the Company’s net operating loss carryforwards (“NOLs”) under the US Internal Revenue Code (the “Code”).",
+        "title": "FitLife Brands Adopts Rights Plan to Protect its NOL Assests",
+        "updated": "Thu, 04 Mar 2021 09:17:00 GMT",
+        "author": "GlobeNewswire Inc.",
+        "created_at": "2025-02-25T18:25:16.889Z"
+    },
+    {
+        "_id": "67bd389056764d5fabfb53dd",
+        "press_id": "2125626",
+        "html": "https://www.globenewswire.com/news-release/2020/11/12/2125626/0/en/FitLife-Brands-Announces-Third-Quarter-2020-Results.html",
+        "teaser": "Omaha, Nov. 12, 2020 (GLOBE NEWSWIRE) -- OMAHA, NE – November 12, 2020 -- FitLife Brands, Inc. (“FitLife” or the “Company”) (OTC Pink: FTLF), an international provider of innovative and proprietary nutritional supplements for health-conscious consumers marketed under the brand names NDS Nutrition™, PMD®, SirenLabs®, CoreActive®, Metis Nutrition™, iSatori™, Energize, and BioGenetic Laboratories, today announced results for the three and nine months ended September 30, 2020.",
+        "title": "FitLife Brands Announces Third Quarter 2020 Results",
+        "updated": "Thu, 12 Nov 2020 08:30:00 GMT",
+        "author": "GlobeNewswire Inc.",
+        "created_at": "2025-02-25T18:25:16.889Z"
+    },
+    {
+        "_id": "67bd389056764d5fabfb53de",
+        "press_id": "2077846",
+        "html": "https://www.globenewswire.com/news-release/2020/08/13/2077846/0/en/FitLife-Brands-Announces-Second-Quarter-2020-Results.html",
+        "teaser": "OMAHA, NE – August 13, 2020 -- FitLife Brands, Inc. (“FitLife” or the “Company”) (OTC Pink: FTLF), an international provider of innovative and proprietary nutritional supplements for health-conscious consumers marketed under the brand names NDS Nutrition™, PMD®, SirenLabs®, CoreActive®, Metis Nutrition™, iSatori™, Energize, and BioGenetic Laboratories, today announced results for the three and six months ended June 30, 2020.",
+        "title": "FitLife Brands Announces Second Quarter 2020 Results",
+        "updated": "Thu, 13 Aug 2020 08:00:00 GMT",
+        "author": "GlobeNewswire Inc.",
+        "created_at": "2025-02-25T18:25:16.890Z"
+    },
+    {
+        "_id": "67bd389056764d5fabfb53df",
+        "press_id": "2034207",
+        "html": "https://www.globenewswire.com/news-release/2020/05/15/2034207/0/en/FitLife-Brands-Announces-First-Quarter-2020-Results.html",
+        "teaser": "OMAHA, Neb., May 15, 2020 (GLOBE NEWSWIRE) -- FitLife Brands, Inc. (“FitLife” or the “Company”) (OTC Pink: FTLF), an international provider of innovative and proprietary nutritional supplements for health-conscious consumers marketed under the brand names NDS Nutrition™, PMD®, SirenLabs®, CoreActive®, Metis Nutrition™, iSatori™, Energize, and BioGenetic Laboratories, today announced results for the three months ended March 31, 2020.",
+        "title": "FitLife Brands Announces First Quarter 2020 Results",
+        "updated": "Fri, 15 May 2020 08:00:00 GMT",
+        "author": "GlobeNewswire Inc.",
+        "created_at": "2025-02-25T18:25:16.890Z"
+    },
+    {
+        "_id": "67bd389056764d5fabfb53e0",
+        "press_id": "2011462",
+        "html": "https://www.globenewswire.com/news-release/2020/04/03/2011462/0/en/FitLife-Brands-Provides-Preliminary-First-Quarter-Results-and-Operational-Update.html",
+        "teaser": "OMAHA, Neb., April 03, 2020 (GLOBE NEWSWIRE) -- FitLife Brands, Inc. (“FitLife” or the “Company”) (OTC Pink: FTLF), an international provider of innovative and proprietary nutritional supplements for health-conscious consumers marketed under the brand names NDS Nutrition™, PMD®, SirenLabs®, CoreActive®, Metis Nutrition™, iSatori™, Energize, and BioGenetic Laboratories, is providing some preliminary performance indicators for the first quarter of 2020, along with a general operational update. The intent of this communication is to provide transparency to the shareholders of the Company given the challenges and uncertainty resulting from the COVID-19 outbreak.",
+        "title": "FitLife Brands Provides Preliminary First Quarter Results and Operational Update",
+        "updated": "Fri, 03 Apr 2020 08:30:00 GMT",
+        "author": "GlobeNewswire Inc.",
+        "created_at": "2025-02-25T18:25:16.890Z"
+    },
+    {
+        "_id": "67bd389056764d5fabfb53d1",
+        "press_id": "2008288",
+        "html": "https://www.globenewswire.com/news-release/2020/03/30/2008288/0/en/FitLife-Brands-Announces-Fourth-Quarter-and-Full-Year-2019-Results.html",
+        "teaser": "OMAHA, Neb., March 30, 2020 (GLOBE NEWSWIRE) -- FitLife Brands, Inc. (“FitLife” or the “Company”) (OTC Pink: FTLF), an international provider of innovative and proprietary nutritional supplements for health-conscious consumers marketed under the brand names NDS Nutrition™, PMD®, SirenLabs®, CoreActive®, Metis Nutrition™, iSatori™, Energize, and BioGenetic Laboratories, today announced results for the three and twelve months ended December 31, 2019.",
+        "title": "FitLife Brands Announces Fourth Quarter and Full Year 2019 Results",
+        "updated": "Mon, 30 Mar 2020 08:00:00 GMT",
+        "author": "GlobeNewswire Inc.",
+        "created_at": "2025-02-25T18:25:16.887Z"
+    },
+    {
+        "_id": "67bd389056764d5fabfb53d2",
+        "press_id": "1944632",
+        "html": "https://www.globenewswire.com/news-release/2019/11/11/1944632/0/en/FitLife-Brands-Announces-Third-Quarter-2019-Results.html",
+        "teaser": "OMAHA, Neb., Nov. 11, 2019 (GLOBE NEWSWIRE) -- FitLife Brands, Inc. (“FitLife” or the “Company”) (OTC Pink: FTLF), an international provider of innovative and proprietary nutritional supplements for health-conscious consumers marketed under the brand names NDS Nutrition™, PMD®, SirenLabs®, CoreActive®, Metis Nutrition™, iSatori™, Energize, and BioGenetic Laboratories, today announced results for the three and nine months ended September 30, 2019.",
+        "title": "FitLife Brands Announces Third Quarter 2019 Results",
+        "updated": "Mon, 11 Nov 2019 07:00:00 GMT",
+        "author": "GlobeNewswire Inc.",
+        "created_at": "2025-02-25T18:25:16.887Z"
+    },
+    {
+        "_id": "67bd389056764d5fabfb53d3",
+        "press_id": "1935395",
+        "html": "https://www.globenewswire.com/news-release/2019/10/24/1935395/0/en/iSatori-Launches-L-Carnitine-Fat-Loss-Drink-Mix-at-Walmart.html",
+        "teaser": "OMAHA, Neb., Oct. 24, 2019 (GLOBE NEWSWIRE) -- New L-Carnitine liquid supplement beverage that supports fat loss is now available at approximately 3,700 Walmart stores, making the keto-friendly product easily accessible for millions looking for a healthy lifestyle drink.",
+        "title": "iSatori Launches L-Carnitine Fat Loss Drink Mix at Walmart",
+        "updated": "Thu, 24 Oct 2019 16:30:00 GMT",
+        "author": "GlobeNewswire Inc.",
+        "created_at": "2025-02-25T18:25:16.888Z"
+    },
+    {
+        "_id": "67bd389056764d5fabfb53d4",
+        "press_id": "1900157",
+        "html": "https://www.globenewswire.com/news-release/2019/08/09/1900157/0/en/FitLife-Brands-Announces-Second-Quarter-2019-Results.html",
+        "teaser": "OMAHA, Neb., Aug. 09, 2019 (GLOBE NEWSWIRE) -- FitLife Brands, Inc. (“FitLife” or the “Company”) (OTC Pink: FTLF), an international provider of innovative and proprietary nutritional supplements for health-conscious consumers marketed under the brand names NDS Nutrition™, PMD®, SirenLabs®, CoreActive®, Metis Nutrition™, iSatori™, Energize, and BioGenetic Laboratories, today announced results for the three and six months ended June 30, 2019.",
+        "title": "FitLife Brands Announces Second Quarter 2019 Results",
+        "updated": "Fri, 09 Aug 2019 18:00:00 GMT",
+        "author": "GlobeNewswire Inc.",
+        "created_at": "2025-02-25T18:25:16.888Z"
+    }
+]
