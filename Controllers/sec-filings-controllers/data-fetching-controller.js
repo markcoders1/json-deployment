@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router();
 
-
-const Filling = require('../../Models/sec-filing-modals/Filling'); // Update the path
+const NewFilling = require('../../Models/sec-filing-modals/NewFilling');
+const Filling = require('../../Models/sec-filing-modals/Filling');
 const Press = require('../../Models/sec-filing-modals/Press');
 const Stock = require('../../Models/sec-filing-modals/Stock');
 
@@ -22,6 +22,24 @@ router.get('/sec-fillings', async (req, res) => {
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
+});
+
+router.get('/new-sec-fillings', async (req, res) => {
+  try {
+      const newFillings = await NewFilling.find();
+      if( newFillings.length > 0 ){
+          console.log('New Fillings Fetched');
+          //fillings.reverse();
+          newFillings.sort((a, b) => new Date(b.fillingDate) - new Date(a.fillingDate));
+          res.json(newFillings);
+      }
+      else{
+          console.log('fillings not found');
+          res.status(404).json({ message: 'Fillings not found' });
+      }
+  } catch (error) {
+      res.status(500).json({ message: error.message });
+  }
 });
 
 router.get('/press-release', async (req, res) => {

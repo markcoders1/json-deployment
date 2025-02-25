@@ -20,10 +20,12 @@ const {
     getFillings,
     getPressReleases,
     getStocksData,
+    getNewFillings
 } = require("./Controllers/sec-filings-controllers/functions.js");
 const cron = require("node-cron");
 const dataFetching = require("./Controllers/sec-filings-controllers/data-fetching-controller.js");
 const { connect } = require("./config/Database");
+const { get } = require("mongoose");
 connect();
 app.use(express.json());
 app.use(cors(corsOptions));
@@ -39,6 +41,13 @@ async function cronFunctions() {
         console.log("Error in cronFunctions", error);
     }
 }
+//Testing Cron Function one time
+// (async () => {
+//     await cronFunctions();
+//     await getPressReleases();
+// })();
+
+
 // TEST CODE FOR CRON JOB CHECKING
 // function executeCronFunctionsSeries() {
 //     let executionCount = 1;
@@ -89,20 +98,10 @@ setTimeout(() => {
         scheduled: true,
         timezone: "America/New_York"
     });
+    
     console.log('Cron job has been scheduled.');
 }, 10000);
 
-
-// async function checkForDuplicates() {
-//     const hasDuplicates = await Filling.checkForDuplicates();
-//     if (hasDuplicates) {
-//       console.log("Duplicates found in the database.");
-//     } else {
-//       console.log("No duplicates found.");
-//     }
-//   }
-  
-//   checkForDuplicates();
 
 
 //MAIN HOME API

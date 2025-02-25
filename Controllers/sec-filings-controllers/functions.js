@@ -1,4 +1,5 @@
 const { default: axios } = require("axios");
+const NewFiling = require("../../Models/sec-filing-modals/NewFilling")
 const Filling = require("../../Models/sec-filing-modals/Filling");
 const Press = require("../../Models/sec-filing-modals/Press");
 const Stock = require("../../Models/sec-filing-modals/Stock");
@@ -7,6 +8,11 @@ const { cloningCampaing } = require("./constants");
 const kscopeApiKey = process.env.KSCOPE_API_KEY;
 const polygonApiKey = process.env.POLYGON_API_KEY;
 const xml2js = require('xml2js');
+
+function extractCode(link) {
+  const match = link.match(/\/data\/\d+\/(\d+)\//);
+  return match ? match[1] : null;
+}
 
 const getFillings = async () => {
   try {
@@ -31,14 +37,14 @@ const getFillings = async () => {
         const res = await cloningCampaing();
         if(res.campaignId){
           const newLog = new Logs({
-            doc_id: filling.acc,
-            doc_type: "sec-filling",
-            title: filling.Form_Desc,
-            campaignId: res.campaignId
-          });
-          await newLog.save();
+          doc_id: filling.acc,
+          doc_type: "sec-filling",
+          title: filling.Form_Desc,
+          campaignId: res.campaignId
+        });
+        await newLog.save();
         }
-        console.log("res", res);
+      console.log("res", res);
       }
       else if(isPresent){
         console.log("Filling already present in DB ", filling.acc);
@@ -49,10 +55,54 @@ const getFillings = async () => {
   }
 };
 
+const getNewFillings = async () => {
+  try {
+    const apiUrl = "https://financialmodelingprep.com/api/v3/sec_filings/FTLF?&apikey=1CUSXx2GTGIcCi3NaUqAZ2ehUiYeNfeZ";
+    const response = await fetch(apiUrl);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    let filingsData = await response.json();
+    filingsData = filingsData.sort((b, a) => new Date(a.fillingDate) - new Date(b.fillingDate));
+
+    for (const filing of filingsData) {
+      const filing_id = extractCode(filing.link);
+      if (!filing_id) {
+        console.warn("Could not extract filing_id for", filing.link);
+        continue;
+      }
+
+      // Directly check if filing exists in DB
+      const isPresent = await NewFiling.exists({ filing_id });
+
+      if (!isPresent) {
+        const newFilling = new NewFiling({ filing_id, ...filing });
+        await newFilling.save();
+        console.log("New Filing saved in DB", filing_id);
+
+        // const res = await cloningCampaing();
+        // if (res.campaignId) {
+        //   await Logs.create({
+        //     doc_id: filing_id,
+        //     doc_type: "new-sec-filling",
+        //     title: filing.type,
+        //     campaignId: res.campaignId
+        //   });
+        // }
+        // console.log("Response from campaign", res);
+      } else {
+        console.log("New Filing already present in DB", filing_id);
+      }
+    }
+  } catch (error) {
+    console.error("Error in getFillings", error);
+  }
+};
+
 const processPressRelease = async (pressRelease) => {
   const isPresent = await Press.findOne({ press_id: pressRelease['dc:identifier'] });
   if (!isPresent) {
-    console.log(`New press release: ${pressRelease.title}`);
+    console.log(`New press release with id: ${pressRelease['dc:identifier']}`);
       // Save and clone campaign
       const newPress = new Press({
         press_id:pressRelease['dc:identifier'],
@@ -63,6 +113,7 @@ const processPressRelease = async (pressRelease) => {
         updated:pressRelease.pubDate
       })
       await newPress.save();
+      console.log(`New press release saved with id: ${pressRelease['dc:identifier']}`);
       const res = await cloningCampaing();
       if(res.campaignId){
         const newLog = new Logs({
@@ -76,7 +127,7 @@ const processPressRelease = async (pressRelease) => {
       console.log("res", res);
   }
   else{
-    console.log(`Press release already present: ${pressRelease.title}`);
+    console.log(`Press release present with id: ${pressRelease['dc:identifier']}`);
   }
 };
 
@@ -140,6 +191,7 @@ const getStocksData = async () => {
   }
 };
 module.exports = {
+  getNewFillings,
   getFillings,
   getPressReleases,
   getStocksData,
