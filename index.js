@@ -35,7 +35,6 @@ app.use(morgan('tiny'))
 async function cronFunctions() {
     try {
         console.log("Cron job running...");
-        await getFillings();
         await getStocksData();
     } catch (error) {
         console.log("Error in cronFunctions", error);
@@ -90,16 +89,17 @@ setTimeout(() => {
     });
 
 
-    // Schedule the cron job for getPressReleases to run every 30 minutes
-    cron.schedule("*/30 * * * *", async () => {
-        console.log('getPressReleases function executed.');
+    // Schedule the cron job for getPressReleases to run every 10 minutes
+    cron.schedule("*/10 * * * *", async () => {
+        console.log('PressReleases & getNewFillings function executed every 10 minutes with Production campaign');
+        await getNewFillings();
         await getPressReleases();
     }, {
         scheduled: true,
         timezone: "America/New_York"
     });
     
-    console.log('Cron job has been scheduled.');
+    console.log('Cron job has been scheduled for every 10 minutes');
 }, 10000);
 
 
@@ -114,4 +114,5 @@ app.use("/api", dataFetching);
 
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
+    console.log(`Production Campaign Id is pushed`);
 });

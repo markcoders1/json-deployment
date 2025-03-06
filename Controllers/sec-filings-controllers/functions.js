@@ -80,16 +80,16 @@ const getNewFillings = async () => {
         await newFilling.save();
         console.log("New Filing saved in DB", filing_id);
 
-        // const res = await cloningCampaing();
-        // if (res.campaignId) {
-        //   await Logs.create({
-        //     doc_id: filing_id,
-        //     doc_type: "new-sec-filling",
-        //     title: filing.type,
-        //     campaignId: res.campaignId
-        //   });
-        // }
-        // console.log("Response from campaign", res);
+        const res = await cloningCampaing();
+        if (res.campaignId) {
+          await Logs.create({
+            doc_id: filing_id,
+            doc_type: "new-sec-filling",
+            title: filing.type,
+            campaignId: res.campaignId
+          });
+        }
+        console.log("Response from campaign", res);
       } else {
         console.log("New Filing already present in DB", filing_id);
       }
