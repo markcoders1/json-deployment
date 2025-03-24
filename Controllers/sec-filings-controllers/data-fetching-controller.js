@@ -5,6 +5,7 @@ const NewFilling = require('../../Models/sec-filing-modals/NewFilling');
 const Filling = require('../../Models/sec-filing-modals/Filling');
 const Press = require('../../Models/sec-filing-modals/Press');
 const Stock = require('../../Models/sec-filing-modals/Stock');
+const NewStock = require('../../Models/sec-filing-modals/NewStock');
 
 router.get('/sec-fillings', async (req, res) => {
     try {
@@ -73,6 +74,23 @@ router.get('/press-release', async (req, res) => {
 router.get('/stock-quote', async (req, res) => {
     try {
         const stock = await Stock.find();
+        if( stock.length > 0 ){
+            console.log('Stocks Fetched');
+            // stock.reverse();
+            res.json(stock);
+        }
+        else{
+            console.log('Stocks not found');
+            res.status(404).json({ message: 'Stocks not found' });
+        }
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
+router.get('/new-stock-quote', async (req, res) => {
+    try {
+        const stock = await NewStock.find();
         if( stock.length > 0 ){
             console.log('Stocks Fetched');
             // stock.reverse();
